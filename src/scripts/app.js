@@ -1,1 +1,1 @@
-const projName = 'TI - AW';
+const projName = 'Libera Libras';

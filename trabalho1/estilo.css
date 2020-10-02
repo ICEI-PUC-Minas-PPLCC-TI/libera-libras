@@ -1,0 +1,36 @@
+html, body{
+    margin:0px !important;
+    padding: 0px !important;
+  }
+  
+  .estrutura .cabecalho {
+      display: flex;
+      text-align: center;
+      width: 100%;
+      padding: 0%;
+  }
+
+  .corpo img {
+      height: 230px;
+      width: 160px;
+      display: flex;
+  }
+  
+  .corpo .filmes img {
+      display: inline;
+      margin: 10px;
+    }
+
+  .video embed{
+      display: flex;
+      text-align: center;
+      width: 640px;
+      height: 350px;
+  }
+
+  .cabecalho img {
+      display: flex; 
+      align-items: center;
+      width: 1200px;
+      height: 300px;
+  }

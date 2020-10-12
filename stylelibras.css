@@ -58,7 +58,10 @@ h1.Lancamentos, h1{
     color:red; 
 }
 
-
+h3{
+    color: white;
+    font-size:40px ;
+}
 
 
 .lançamentos {

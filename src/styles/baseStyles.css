@@ -15,7 +15,16 @@ html{
 }
 .botoes3{
     background:rgb(105, 46, 46);
-}  
+   
+    
+
+}
+
+main.editorial{
+    background-color:darkblue ;
+    text-align: center;
+   
+}
 #flex{
     display:flex;
 }
@@ -34,7 +43,7 @@ iframe.noticia1{
    width: 80%;
     height: 80%;
     left:115px;
-    down:100px;
+   
 } 
 .categorias{
     
@@ -300,7 +309,7 @@ display: inline-block;
     iframe.noticia1{
         width: 100%;
          height: 100%;
-         padding-left:10px;
+         left:0px;
      } 
 
 

@@ -1,19 +1,20 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
+`Libera Libras`  
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`CURSO`
+`Ciencia da Computação`
 
-`SEMESTRE`
+`1o Período`
 
 ## Participantes
 
 Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
+-Gustavo Araújo Monteiro
+-Leonardo Gomide
+-Layla Raissa
+-Pedro Tolentino Gontijo
+-Rodrigo Vassilakis
 
 # Estrutura do Documento
 

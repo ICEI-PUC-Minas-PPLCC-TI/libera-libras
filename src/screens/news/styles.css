@@ -19,6 +19,9 @@ html{
     
 
 }
+div#editorial{
+    display:inline-block;
+}
 
 main.editorial{
     background-color:darkblue ;

@@ -23,9 +23,9 @@ etiquetas:
 
 ## Hospedagem
 
-> O site está sendo hospedado no repl.it em dois ambientes, um contendo o código da branch master e outro com o código em dev.
->
-> Dessa forma, os integrantes podem trabalhar em suas máquinas localmente ou pelo repl.it em conjunto. Os links se encontram abaixo.
->
-> - **Master:** https://libera-libras-master.gomideleo.repl.co
-> - **Dev:** https://libera-libras-dev.gomideleo.repl.co
+O site está sendo hospedado no repl.it em dois ambientes, um contendo o código da branch master e outro com o código em dev.
+
+Desta forma, os integrantes podem trabalhar em suas máquinas localmente ou pelo repl.it em conjunto. Os links se encontram abaixo.
+
+ - **Master:** https://libera-libras-master.gomideleo.repl.co
+ - **Dev:** https://libera-libras-dev.gomideleo.repl.co

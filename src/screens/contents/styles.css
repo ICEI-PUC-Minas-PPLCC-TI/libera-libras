@@ -15,9 +15,6 @@ html {
 .botoes3 {
     background: rgb(105, 46, 46);
 }
-div#editorial {
-    display: inline-block;
-}
 
 main.editorial {
     background-color: darkblue;

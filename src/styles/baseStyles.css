@@ -10,6 +10,7 @@ html {
 
 .libera-header {
     background-color: #efefef;
+    border-radius: 12px;
 }
 
 .navbar-toggler {
@@ -87,6 +88,7 @@ body {
 
 main {
     background: #efefef;
+    border-radius: 12px;
     margin-bottom: 16px;
     padding: 16px 0;
 }

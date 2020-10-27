@@ -1,4 +1,7 @@
-const apiUrl = "http://localhost:3000";
+// local
+// const apiUrl = "http://localhost:3000";
+// heroku
+const apiUrl = "https://libera-libras-api.herokuapp.com/";
 
 function htmlGetRequest(url, callback) {
     var request = new XMLHttpRequest();

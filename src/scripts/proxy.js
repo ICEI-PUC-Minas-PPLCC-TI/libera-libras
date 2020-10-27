@@ -1,5 +1,5 @@
 // local
-// const apiUrl = "http://localhost:3000";
+// const apiUrl = "http://localhost:3000/";
 // heroku
 const apiUrl = "https://libera-libras-api.herokuapp.com/";
 
@@ -18,7 +18,7 @@ function htmlGetRequest(url, callback) {
 }
 
 function getSpotlightVideo(screen, callback) {
-    let url = "/spotlightVideos?_expand=video&screen=" + screen; 
+    let url = "spotlightVideos?_expand=video&screen=" + screen; 
     
     htmlGetRequest(url, callback);
 }

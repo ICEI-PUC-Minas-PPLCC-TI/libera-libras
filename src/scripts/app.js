@@ -1,1 +1,0 @@
-const projName = 'Libera Libras';

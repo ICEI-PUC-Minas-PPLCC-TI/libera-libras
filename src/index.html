@@ -8,13 +8,13 @@
     <meta name="author" content="Layla">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles/baseStyles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/proxy.js"></script>
+    <script src="app.js"></script>
 
 </head>
 
@@ -75,12 +75,11 @@
                 </div>
         </section>
 
-        <section class="row porque">
+        <section class="row porque" id="spotlight">
 
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <br>
+            <div class="col-12 col-md-6 col-lg-6 video-box">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vw4stB2__R4" frameborder="0"
+                    <iframe width="560" height="315" frameborder="0" src="about:blank"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -88,13 +87,9 @@
             </div>
 
             <div class="flex col-sm-12 col-md-6 col-lg-6">
-                <h2 class="title">
-                    Por que aprender Libras?
-                </h2>
+                <h2 class="title"></h2>
 
-                <p class="texto"><strong>Sinopse:</strong> Aprenda com o Marcos os 5 motivos para você
-                    aprender Libras
-                </p>
+                <p class="description"></p>
             </div>
         </section>
 
@@ -103,10 +98,9 @@
             <h3 class="title">Aprenda Libras de forma divertida</h3>
             <div class="ensino-videos videos-container">
                 <div class="row videos-row">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 video-box">
                         <div class="video">
                             <h2>MÚSICA</h2>
-                            <br>
                             <div class="embed-responsive embed-responsive-16by9 yt-video">
                                 <iframe width="400" height="225" src="https://www.youtube.com/embed/eGDkz44wHRk"
                                     frameborder="0"
@@ -115,13 +109,11 @@
                             </div>
                             <h4>Passo a passo</h4>
                             <h6><strong>Música: </strong> Meu Abrigo - Melim</h6>
-
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 video-box">
                         <div class="video">
                             <h2>CORES EM LIBRAS</h2>
-                            <br>
                             <div class="embed-responsive embed-responsive-16by9 yt-video">
                                 <iframe width="400" height="225" src="https://www.youtube.com/embed/8CGSZs8eSNU"
                                     frameborder="0"
@@ -133,7 +125,7 @@
                             <h6>Todos os sinais - Para iniciantes</h6>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 video-box">
                         <div class="video">
                             <h2>PARABÉNS PRA VOCÊ EM LIBRAS</h2>
                             <div class="embed-responsive embed-responsive-16by9 yt-video">
@@ -160,7 +152,7 @@
             <h3 class="title">Aprendizado de Libras para crianças Ouvintes</h3>
             <div class="child-videos videos-container">
                 <div class="row videos-row">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 video-box">
                         <div class="video">
                             <h2>APRENDA OS SINAIS DOS ANIMAIS</h2>
                             <div class="embed-responsive embed-responsive-16by9 yt-video">
@@ -173,7 +165,7 @@
                             <h5>Neste vídeo, nós vamos ensinar vocês sinais de 10 animais.</h5>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 video-box">
                         <div class="video">
                             <h2>ANIMAIS EM LIBRAS</h2>
                             <div class="embed-responsive embed-responsive-16by9 yt-video">
@@ -190,10 +182,9 @@
                             </h5>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 video-box">
                         <div class="video">
                             <h2>ALFABETO EM LIBRAS</h2>
-                            <br>
                             <div class="embed-responsive embed-responsive-16by9 yt-video">
                                 <iframe width="400" height="225" src="https://www.youtube.com/embed/ns-MylNcEic"
                                     frameborder="0"
@@ -220,7 +211,7 @@
             <h3 class="title">Curso Básico de Libras para Ouvintes</h3>
             <div class="classes-videos videos-container">
                 <div class="row videos-row">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 video-box">
                         <div class="video">
                             <h2>Aula 1</h2>
                             <div class="embed-responsive embed-responsive-16by9 yt-video">
@@ -230,10 +221,10 @@
                                     allowfullscreen>
                                 </iframe>
                             </div>
-                            <h5><strong>Canal: </strong> Inala Costa</h5> <br>
+                            <h5><strong>Canal: </strong> Inala Costa</h5>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 video-box">
                         <div class="video">
                             <h2>Aula 2</h2>
                             <div class="embed-responsive embed-responsive-16by9 yt-video">
@@ -243,10 +234,10 @@
                                     allowfullscreen>
                                 </iframe>
                             </div>
-                            <h5><strong>Canal: </strong> Inala Costa</h5> <br>
+                            <h5><strong>Canal: </strong> Inala Costa</h5>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 video-box">
                         <div class="video">
                             <h2>Aula 3</h2>
                             <div class="embed-responsive embed-responsive-16by9 yt-video">
@@ -256,13 +247,13 @@
                                     allowfullscreen>
                                 </iframe>
                             </div>
-                            <h5><strong>Canal: </strong> Inala Costa</h5> <br>
+                            <h5><strong>Canal: </strong> Inala Costa</h5>
                         </div>
                     </div>
                 </div>
                 <div class="load-more">
-                    <button type="button" class="btn btn-outline btn-load-more btn-load-more-reviews"><i class="fa fa-plus"
-                            aria-hidden="true"></i>
+                    <button type="button" class="btn btn-outline btn-load-more btn-load-more-reviews"><i
+                            class="fa fa-plus" aria-hidden="true"></i>
                         Carregar mais videos</button>
                 </div>
             </div>

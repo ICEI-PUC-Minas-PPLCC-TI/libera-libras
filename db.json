@@ -12,15 +12,28 @@
             "title": "Por que aprender Libras?",
             "url": "https://www.youtube.com/embed/vw4stB2__R4",
             "description": "Aprenda com o Marcos os 5 motivos para você aprender Libras",
-            "playlistId": ""
+            "playlistId": 0
         }
     ],
     "playlists": [
         {
             "id": 1,
-            "name": "Aprenda Libras de forma divertida",
-            "screen": "", 
+            "name": "Aprenda Libras de forma divertida", 
             "order": 1
+        },{
+            "id": 2,
+            "name": "Aprendizado de Libras para crianças Ouvintes", 
+            "order": 2
+        }
+        ,{
+            "id": 3,
+            "name": "Curso Básico de Libras para Ouvintes", 
+            "order": 3
+        },
+        {
+            "id": 4,
+            "name": "Destaque", 
+            "order": 0
         }
     ],
     "news": [

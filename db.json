@@ -12,27 +12,92 @@
             "title": "Por que aprender Libras?",
             "url": "https://www.youtube.com/embed/vw4stB2__R4",
             "description": "Aprenda com o Marcos os 5 motivos para você aprender Libras",
-            "playlistId": 0
+            "playlistId": 4
+        },
+        {
+            "id": 2,
+            "title": "MÚSICA",
+            "url": "https://www.youtube.com/embed/eGDkz44wHRk",
+            "description": "Meu Abrigo - Melim",
+            "playlistId": 1
+        },
+        {
+            "id": 3,
+            "title": "CORES EM LIBRAS",
+            "url": "https://www.youtube.com/embed/8CGSZs8eSNU",
+            "description": "Todos os sinais - Para iniciantes",
+            "playlistId": 1
+        },
+        {
+            "id": 4,
+            "title": "PARABÉNS PRA VOCÊ EM LIBRAS",
+            "url": "https://www.youtube.com/embed/DU8UbudGqD0",
+            "description": "Feliz aniversário em libras",
+            "playlistId": 1
+        },
+        {
+            "id": 5,
+            "title": "APRENDA OS SINAIS DOS ANIMAIS",
+            "url": "https://www.youtube.com/embed/Z08R9ZbRlrc",
+            "description": "Neste vídeo, nós vamos ensinar vocês sinais de 10 animais.",
+            "playlistId": 2
+        },
+        {
+            "id": 6,
+            "title": "ANIMAIS EM LIBRAS",
+            "url": "https://www.youtube.com/embed/SR5ErJCyCmo",
+            "description": "Ensinar o sinal de alguns animais em LIBRAS, de forma mais lúdica, pois ajuda na memorização e interpretação dos sinais.",
+            "playlistId": 2
+        },
+        {
+            "id": 7,
+            "title": "ALFABETO EM LIBRAS",
+            "url": "https://www.youtube.com/embed/ns-MylNcEic",
+            "description": "Alfabeto em LIBRAS letra por letra com áudio",
+            "playlistId": 2
+        },
+        {
+            "id": 8,
+            "title": "Aula 1",
+            "url": "https://www.youtube.com/embed/dkEcOoUEonk",
+            "description": "<b>Canal:</b> Inala Costa",
+            "playlistId": 3
+        },
+        {
+            "id": 9,
+            "title": "Aula 2",
+            "url": "https://www.youtube.com/embed/9AA5cn19lCQ",
+            "description": "<b>Canal:</b> Inala Costa",
+            "playlistId": 3
+        },
+        {
+            "id": 10,
+            "title": "Aula 3",
+            "url": "https://www.youtube.com/embed/mVtffcc_KXs",
+            "description": "<b>Canal:</b> Inala Costa",
+            "playlistId": 3
         }
     ],
     "playlists": [
         {
             "id": 1,
-            "name": "Aprenda Libras de forma divertida", 
+            "name": "Aprenda Libras de forma divertida",
             "order": 1
-        },{
+
+        },
+        {
             "id": 2,
-            "name": "Aprendizado de Libras para crianças Ouvintes", 
+            "name": "Aprendizado de Libras para crianças Ouvintes",
             "order": 2
-        }
-        ,{
+        },
+        {
             "id": 3,
-            "name": "Curso Básico de Libras para Ouvintes", 
+            "name": "Curso Básico de Libras para Ouvintes",
             "order": 3
         },
         {
             "id": 4,
-            "name": "Destaque", 
+            "name": "Destaque",
             "order": 0
         }
     ],

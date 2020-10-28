@@ -76,14 +76,24 @@
             "url": "https://www.youtube.com/embed/mVtffcc_KXs",
             "description": "<b>Canal:</b> Inala Costa",
             "playlistId": 3
-        }
-    ],
+        },{
+            "id": 11,
+            "title": "Você sabe o que é Libras?",
+            "url": "https://www.youtube.com/embed/my5efyggee8",
+            "description": "Libras é a sigla da Língua Brasileira de Sinais, uma língua de modalidade gestual-visual onde é possível se comunicar através de gestos, expressões faciais e corporais.",
+            "playlistId": 4
+        },{
+            "id": 12,
+            "title": "Você sabe a impotância da Libras?",
+            "url": "https://www.youtube.com/embed/ilHLd3Eb-L0",
+            "description": "Você vai perceber que tanto os surdos quanto as pessoas ao seu redor devem saber se comunicar através dessa língua, para que os surdos não se sintam excluídos e incompreendidos.",
+            "playlistId": 4
+        }    ],
     "playlists": [
         {
             "id": 1,
             "name": "Aprenda Libras de forma divertida",
             "order": 1
-
         },
         {
             "id": 2,
@@ -106,7 +116,24 @@
             "id": 1,
             "title": "",
             "content": "",
-            "date": "",
+            "date": "2012-04-23",
+            "imageUrl": "",
+            "url": ""
+        },
+        {
+            "id": 2,
+            "title": "",
+            "content": "",
+            "date": "2011-03-23",
+            "imageUrl": "",
+            "url": ""
+        },
+        {
+            "id": 3,
+            "title": "",
+            "content": "",
+            "date": "2013-05-23",
+            "imageUrl": "",
             "url": ""
         }
     ]

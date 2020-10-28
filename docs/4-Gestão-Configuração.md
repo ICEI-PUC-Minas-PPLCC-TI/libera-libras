@@ -1,47 +1,31 @@
 # Gestão de Configuração
 
-> Nesta parte do documento, você deve apresentar como foi realizada a
-> gestão de configuração do projeto. Isto é, como a ferramenta de
-> controle de versão foi configurada, bem como a hospedagem da
-> plataforma.
-
 ## Controle de Versão
 
 A ferramenta de controle de versão adotada no projeto foi o
 [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
-foi utilizado para hospedagem do repositório `upstream`.
+foi utilizado para hospedagem do repositório.
 
 O projeto segue a seguinte convenção para o nome de branchs:
 
-- `master`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
+- **Master:** Contém o código estável do projeto, não deve receber commits diretamente.
+- **Hotfix:** Branch extraída de Master quando se nota alguma instabilidade para reparo rápido.
+- **Release:** Branch extraída de Develop para estabilizar as funcionalidades antes de aplicá-las na Master.
+- **Develop:** Contém o código com todas as funcionalidades finalizadas até o momento. Pode possuir algumas instabilidades.
+- **Feature:** Contém o código de uma funcionalidade, esse branch é criado logo antes do início do desenvolvimento de dada funcionalidade, e fundido com Develop depois de ser finalizada. Podem existir múltiplos branches feature ao mesmo tempo.
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para
 etiquetas:
 
-- `bugfix`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
-
-> Discuta como a configuração do projeto foi feita na ferramenta de
-> versionamento escolhida. Exponha como a gerência de tags, merges,
-> commits e branchs é realizada. Discuta como a gerência de issues foi
-> realizada.
->
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
+- **bug:** uma funcionalidade encontra-se com problemas
+- **documentation:** uma funcionalidade precisa ser documentada
+- **enhancement:** uma nova funcionalidade precisa ser introduzida ou melhorada
 
 ## Hospedagem
 
-> Explique como a hospedagem e o lançamento da plataforma foi feita.
->
-> **Links Úteis**:
->
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Crie seu Site com o
->   HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-> - [GoDady](https://br.godaddy.com/how-to)
-> - [GitHub Pages](https://pages.github.com/)
+O site está sendo hospedado no repl.it em dois ambientes, um contendo o código da branch master e outro com o código em dev.
+
+Desta forma, os integrantes podem trabalhar em suas máquinas localmente ou pelo repl.it em conjunto. Os links se encontram abaixo.
+
+ - **Master:** https://libera-libras-master.gomideleo.repl.co
+ - **Dev:** https://libera-libras-dev.gomideleo.repl.co

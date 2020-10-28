@@ -10,11 +10,11 @@ Trabalho Interdisciplinar - Aplicacões Web
 ## Participantes
 
 Os membros do grupo são: 
--Gustavo Araújo Monteiro
--Leonardo Gomide
--Layla Raissa
--Pedro Tolentino Gontijo
--Rodrigo Vassilakis
+- Gustavo Araújo Monteiro
+- Leonardo Gomide
+- Layla Raissa
+- Pedro Tolentino Gontijo
+- Rodrigo Vassilakis
 
 # Estrutura do Documento
 

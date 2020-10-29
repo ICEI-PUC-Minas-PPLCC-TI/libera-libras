@@ -4,6 +4,11 @@
             "id": 1,
             "screen": "home",
             "videoId": 1
+        },
+        {
+            "id": 2,
+            "screen": "news",
+            "videoId": 1
         }
     ],
     "videos": [
@@ -90,6 +95,13 @@
             "url": "https://www.youtube.com/embed/ilHLd3Eb-L0",
             "description": "Você vai perceber que tanto os surdos quanto as pessoas ao seu redor devem saber se comunicar através dessa língua, para que os surdos não se sintam excluídos e incompreendidos.",
             "playlistId": 4
+        },
+        {
+            "id": 13,
+            "title": "Você sabe a impotância da Libras?",
+            "url": "https://www.youtube.com/embed/3M36QIqR4_g",
+            "description": "Regina Casé e sua filha Benedita, que é surda, explicam um pouco sobre a surdez, suas dificuldades e dão dicas de situações que os surdos passam.<br><a href='https://twitter.com/ReginaCase/status/1309881203911258112'>leia mais</a>",
+            "playlistId": 0
         }
     ],
     "playlists": [

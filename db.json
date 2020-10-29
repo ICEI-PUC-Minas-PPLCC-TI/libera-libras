@@ -76,19 +76,22 @@
             "url": "https://www.youtube.com/embed/mVtffcc_KXs",
             "description": "<b>Canal:</b> Inala Costa",
             "playlistId": 3
-        },{
+        },
+        {
             "id": 11,
             "title": "Você sabe o que é Libras?",
             "url": "https://www.youtube.com/embed/my5efyggee8",
             "description": "Libras é a sigla da Língua Brasileira de Sinais, uma língua de modalidade gestual-visual onde é possível se comunicar através de gestos, expressões faciais e corporais.",
             "playlistId": 4
-        },{
+        },
+        {
             "id": 12,
             "title": "Você sabe a impotância da Libras?",
             "url": "https://www.youtube.com/embed/ilHLd3Eb-L0",
             "description": "Você vai perceber que tanto os surdos quanto as pessoas ao seu redor devem saber se comunicar através dessa língua, para que os surdos não se sintam excluídos e incompreendidos.",
             "playlistId": 4
-        }    ],
+        }
+    ],
     "playlists": [
         {
             "id": 1,
@@ -114,27 +117,27 @@
     "news": [
         {
             "id": 1,
-            "title": "",
-            "content": "",
-            "date": "2012-04-23",
-            "imageUrl": "",
-            "url": ""
+            "title": "Sign Aloud",
+            "content": "Os estudantes Thomas Pryor y Navid Azodi da Universidade de Washington criaram umas luvas que podem traduzir a linguagem de sinais em texto ou voz. Isso facilitaria a comunicação entre pessoas que não conhecem a linguagem de sinais...",
+            "date": "2020-10-01",
+            "url": "https://www.linkedin.com/posts/wedercosta_signaloud-ugcPost-6712359811868045312-0IZT/",
+            "imageUrl": "https://i.ytimg.com/vi/l01sdzJHCCM/maxresdefault.jpg"
         },
         {
             "id": 2,
-            "title": "",
-            "content": "",
-            "date": "2011-03-23",
-            "imageUrl": "",
-            "url": ""
+            "title": "Regina Casé e Benedita",
+            "content": "Regina Casé e sua filha Benedita, que é surda, explicam um pouco sobre a surdez, suas dificuldades e dão dicas de situações que os surdos passam.",
+            "date": "2020-10-01",
+            "url": "https://f5.folha.uol.com.br/celebridades/2020/09/no-dia-do-surdo-regina-case-fala-sobre-perda-de-audicao-da-filha-benedita.shtml",
+            "imageUrl": "https://cdn-ofuxico.akamaized.net/img/upload/noticias/2019/08/20/regina-case-fala-sobre-a-surdez-da-filha-video_356509_36.jpg"
         },
         {
             "id": 3,
-            "title": "",
-            "content": "",
-            "date": "2013-05-23",
-            "imageUrl": "",
-            "url": ""
+            "title": "Mascaras para surdos",
+            "content": "Máscaras acentuam as dificuldades de comunicação de deficientes auditivos",
+            "date": "2020-10-01",
+            "url": "https://www.uol.com.br/vivabem/noticias/redacao/2020/09/26/mascaras-acentuam-as-dificuldades-de-comunicacao-de-deficientes-auditivos.html",
+            "imageUrl": "https://conteudo.imguol.com.br/c/entretenimento/b1/2020/09/24/surdos-e-o-uso-de-mascara-1600968606430_v2_900x506.jpg"
         }
     ]
 }

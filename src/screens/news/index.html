@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
     <link rel="stylesheet" href="../../styles/baseStyles.css">
     <link rel="stylesheet" href="styles.css">
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../scripts/proxy.js"></script>
+    <script src="app.js"></script>
 </head>
 
 <body>
@@ -58,176 +58,51 @@
 
     <main class="container">
 
-        <h1 class="Lancamentos">Notícias</h1>
+        <section class="row spotlight">
+            <div class="spotlight-container col-12">
+                <h1 class="title spotlight-title">Destaque</h1>
+                <div id="spotlight" class="spotlight-area">
+                    <div class="spotlight-row row">
+                        <div class="video-row col-12">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="560" height="315" src="about:blank" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
 
-
-        <section class="row  lançamentos">
-            <div class=" col-sm-12 col-md-12 col-lg-12">
-
-                <br>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="noticia1" width="560" height="315" src="https://www.youtube.com/embed/3M36QIqR4_g"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+                        <div class="spotliht-content col-12">
+                            <h3 class="title"></h3>
+                            <p class="content"></p>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
-            <div class="flex col-sm-12 col-md-12 col-lg-12">
-
-
-                <p class="noticia1"><strong>01/10/2020-Regina Casé e Benedita </strong></p>
-                </h2>
-                <h4 class="subtitulo">
-
-                </h4>
-                <p class="noticia1"> Regina Casé e sua filha Benedita, que é surda, explicam um pouco sobre a surdez,
-                    suas
-                    dificuldades e dão dicas de situações que os surdos passam.
-
-                </p>
-                <p class="noticia1">Para ver mais sobre isso <a
-                        href="https://twitter.com/ReginaCase/status/1309881203911258112">clique aqui.</a> </p>
-
-
-
-
-
-
         </section>
 
-        </div>
-
-        <h1>Outras notícias</h1>
-
-        <div class="Novidades">
-            <div id="aqui-fica-as-novidades" class="col-12 col-sm-12 col-md-12 col-lg-12">
-                <section class="row">
-                    <div id="aqui-fica-a-imagem-da-noticia" class="col-12 col-sm-12 col-md-12 col-lg-4">
-
-                        <img width="280" height="157,5" src="../../assets/luvas inteligentes.jpg">
+        <section class="news">
+            <h2 class="title">Notícias</h2>
+        
+            <div class="news-container container">
+                <div class="news-item row">
+                    <div class="news-image col-12 col-md-6 col-lg-4">
+                        <img class="embed-responsive embed-responsive-16by9" src="about:blank">
                     </div>
-                    <div id="aqui-fica-a-descrição-da-noticia" class="col-12 col-sm-12 col-md-12 col-lg-8">
-                        <h2 class="titulo">
-                            <span>01/10/2020-<strong>Você Sabia?</strong></span>
+                    <div class="col-12 col-md-6 col-lg-8">
+                        <h2 class="news-title">
+                            <span class="date"></span> - <span class="title"></span>
                         </h2>
-                        <h4 class="subtitulo">
-
-                        </h4>
-                        <p>Os estudantes Thomas Pryor y Navid Azodi da Universidade de Washington criaram umas luvas que
-                            podem traduzir a linguagem de sinais em texto ou voz. Isso facilitaria a comunicação entre
-                            pessoas que não conhecem a linguagem de sinais...</p>
-                        <p>Para ver sobre as luvas inteligentes <a
-                                href="https://www.linkedin.com/posts/wedercosta_signaloud-ugcPost-6712359811868045312-0IZT/">clique
-                                aqui.</a> </p>
-
-
-                        </p>
+                        <p class="content"></p>
+                        <a class="link" href="about:blank">Leia
+                            mais </a>
                     </div>
-                </section>
-
-                <section class="row">
-                    <div id="aqui-fica-a-imagem-da-noticia" class="col-12 col-sm-12 col-md-12 col-lg-4">
-                        <img width="280" height="157,5" src="../../assets/Benedita.jpg">
-                    </div>
-
-                    <div id="aqui-fica-a-descrição-da-noticia" class="col-12 col-sm-12 col-md-12 col-lg-8">
-                        <h2 class="titulo">
-                            <span>01/10/2020-<strong></strong>Regina Casé e Benedita </strong></span>
-                        </h2>
-                        <h4 class="subtitulo">
-
-                        </h4>
-                        <p> Regina Casé e sua filha Benedita, que é surda, explicam um pouco sobre a surdez, suas
-                            dificuldades e dão dicas de situações que os surdos passam.
-
-                        </p>
-                        <p>Para ver mais sobre isso <a
-                                href="https://twitter.com/ReginaCase/status/1309881203911258112">clique aqui.</a> </p>
-
-
-                    </div>
-                </section>
-
-                <section class="row">
-
-                    <div id="aqui-fica-a-imagem-da-noticia" class="col-12 col-sm-12 col-md-12 col-lg-4">
-                        <img width="280" height="157,5" src="../../assets/mascaras.jpg">
-
-                    </div>
-                    <div id="aqui-fica-a-descrição-da-noticia" class="col-12 col-sm-12 col-md-12 col-lg-8">
-                        <h2 class="titulo">
-                            <span>01/10/2020-<strong></strong>Máscaras acentuam as dificuldades de comunicação de
-                                deficientes auditivos... </span>
-                        </h2>
-                        <h4 class="subtitulo">
-
-                        </h4>
-                        <p>Para ver mais sobre isso <a
-                                href="https://www.uol.com.br/vivabem/noticias/redacao/2020/09/26/mascaras-acentuam-as-dificuldades-de-comunicacao-de-deficientes-auditivos.html">clique
-                                aqui.</a> </p>
-
-
-
-                        </p>
-                    </div>
-                </section>
+                </div>
             </div>
-            <!-- <div  id="quebrar" class="col-12 col-sm-12 col-md-12 col-lg-12">  -->
-
-            <!--  <h1>Sobre</h1>
-                <p>Este site foi desenvolvido para agregar assuntos relacionados ao aprendizado em libras, buscando
-                    facilitar o encontro desses conteúdos, por quem se interesse e também buscando fazer com que mais
-                    pessoas se juntem a inclusão dos surdos, que necessitam de que mais pessoas saibam se comunicar com
-                    eles
-                </p> -->
+        </section>
 
 
     </main>
-    <br>
-    
-    <main class="container-fluid editorial">
-        <section class="row">
-            <div id="editorial" class="col-12 col-sm-12 col-md-4 col-lg-4">
-                <br>
-                <br>
-                <p><strong>Equipe Criadora:</strong></p>
-                <p>Layla Raissa </p>
-                <p>Leonardo Gomide </p>
-                <p>Rodrigo Vassilakis </p>
-                <p>Gustavo Araújo </p>
-                <p> Pedro Tolentino</p>
-            </div>
-            <div id="editorial" class="col-12 col-sm-12 col-md-4 col-lg-4">
-                <h1>Editorial</h1>
-                <br>
-               
-                <p><strong>Siga-nos:</strong> <p>
-                    <p><Instagram</p>
-                    <p>Facebook </p>
-                    <p>Instagram</p>
-
-            </div>
-            <div id="editorial" class="col-12 col-sm-12 col-md-4 col-lg-4">
-                <br>
-                <br>
-                <p><strong>Contato:</strong> <p>
-                    <p>Telefone: (XX) XXXX-XXXX</p>
-                    <p>equipelibras@gmail.com</p> 
-
-            </div>
-            <h3></h3>
-             </div> 
-            </div>
-
-        </section>
-
-    </main>
-
-
-
 
     <!--Rodape-Final do site-->
     <!--  <footer class="rodape"> -->
@@ -248,18 +123,18 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-        <!--Tradutor V-libras-->
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-              <div class="vw-plugin-top-wrapper"></div>
-            </div>
-          </div>
-          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-          <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-          </script>
-          <!--Fim do tradutor-->
+    <!--Tradutor V-libras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!--Fim do tradutor-->
 </body>
 
 </html>

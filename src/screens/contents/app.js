@@ -1,5 +1,5 @@
-var playlistPage = 1;
-var playlistPageSize = 2;
+var playlistPageSize = 3;
+var newsPageSize = 3;
 var videoPageSize = 2;
 
 function updateSpotlightVideo(data) {
@@ -10,6 +10,44 @@ function updateSpotlightVideo(data) {
     spotlight.getElementsByClassName("title")[0].innerHTML = video.title;
     spotlight.getElementsByClassName("description")[0].innerHTML =
         video.description;
+}
+
+function updateSpotlightCarousel(data) {
+    let playlist = data[0];
+    console.log(data);
+    let spotlight = document.getElementById("spotlight");
+    let carouselInner = spotlight.getElementsByClassName("carousel-inner")[0];
+    let videoDiv = spotlight.getElementsByClassName("carousel-item")[0];
+    let indicatorArea = spotlight.getElementsByClassName(
+        "carousel-indicators"
+    )[0];
+    let indicator = spotlight.getElementsByTagName("li")[0];
+
+    playlist.videos.forEach((video, index) => {
+        let thisVideoDiv;
+        if (index != 0) {
+            let thisIndicator = indicator.cloneNode(true);
+            thisIndicator.setAttribute("data-slide-to", index);
+            thisIndicator.setAttribute.class = "";
+            indicatorArea.appendChild(thisIndicator);
+        }
+
+        if (videoDiv.id) {
+            thisVideoDiv = videoDiv.cloneNode(true);
+            carouselInner.appendChild(thisVideoDiv);
+        } else {
+            thisVideoDiv = videoDiv;
+        }
+
+        thisVideoDiv.id = "spotlight-video-" + video.id;
+        thisVideoDiv.getElementsByTagName("iframe")[0].src = video.url;
+        thisVideoDiv.getElementsByClassName("title")[0].innerHTML = video.title;
+        thisVideoDiv.getElementsByClassName("description")[0].innerHTML =
+            video.description;
+    });
+
+    indicator.classList.add("active");
+    videoDiv.classList.add("active");
 }
 
 function clearPlaylistVideos(playlist) {
@@ -103,24 +141,41 @@ function updatePlaylists(data) {
     });
 }
 
-function start() {
-    getSpotlightVideo("home", updateSpotlightVideo);
-    getPlaylistByPage(playlistPage, playlistPageSize, updatePlaylists);
-    playlistPage++;
+function formatDate(date) {
+    date = date.split("-");
+    return date[2]+"/"+date[1]+"/"+date[0]
 }
 
-function endPage() {
-    getPlaylistByPage(playlistPage, playlistPageSize, updatePlaylists);
-    playlistPage++;
+function updateNews(data) {
+    let newsContainer = document.getElementsByClassName("news-container")[0];
+    let newsItem = newsContainer.getElementsByClassName("news-item")[0];
+
+    data.forEach((news) => {
+        let thisNewsDiv;
+
+        if (newsItem.id) {
+            thisNewsDiv = newsItem.cloneNode(true);
+            newsContainer.appendChild(thisNewsDiv);
+        } else {
+            thisNewsDiv = newsItem;
+        }
+
+        thisNewsDiv.id = "news-" + news.id;
+        thisNewsDiv.getElementsByClassName("date")[0].innerHTML = formatDate(
+            news.date
+        );
+        thisNewsDiv.getElementsByClassName("title")[0].innerHTML = news.title;
+        thisNewsDiv.getElementsByClassName("content")[0].innerHTML =
+            news.content;
+        thisNewsDiv.getElementsByClassName("link")[0].href = news.url;
+        thisNewsDiv.getElementsByTagName("img")[0].src = news.imageUrl;
+    });
+}
+
+function start() {
+    getSpotlightPlaylist(updateSpotlightCarousel);
+    getPlaylistByPage(1, playlistPageSize, updatePlaylists);
+    getNewsbyPage(1, newsPageSize, updateNews);
 }
 
 $(document).ready(start);
-
-$(window).scroll(function () {
-    if (
-        $(window).scrollTop() + $(window).height() >
-        $(document).height() - 100
-    ) {
-        endPage();
-    }
-});

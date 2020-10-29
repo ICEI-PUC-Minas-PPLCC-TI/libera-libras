@@ -29,9 +29,15 @@ function getPlaylistById(id, callback) {
     htmlGetRequest(url, callback);
 }
 
+function getSpotlightPlaylist(callback) {
+    let url = "playlists?order=0&_embed=videos";
+
+    htmlGetRequest(url, callback);
+}
+
 function getPlaylistByPage(page, pageSize, callback) {
     let url =
-        "playlists?order_gte=1&_sort=order&_order=asc&_nested=videos&_page=" +
+        "playlists?order_gte=1&_sort=order&_order=asc&_embed=videos&_page=" +
         page +
         "&_limit=" +
         pageSize;
@@ -47,6 +53,13 @@ function getVideosByPlaylist(page, pageSize, playlist, callback) {
         page +
         "&_limit=" +
         pageSize;
+
+    htmlGetRequest(url, callback);
+}
+
+function getNewsbyPage(page, pageSize, callback) {
+    let url =
+        "news?_sort=date&_order=desc&_page=" + page + "&_limit=" + pageSize;
 
     htmlGetRequest(url, callback);
 }

@@ -1,0 +1,131 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    height: 90px;
+    width: 150px;
+}
+
+.libera-header {
+    background-color: #efefef;
+    border-radius: 12px;
+}
+
+.navbar-toggler {
+    border-color: #3a3ca3 !important;
+    color: #3a3ca3 !important;
+}
+
+.navbar-toggler-icon {
+    color: #3a3ca3 !important;
+}
+
+.menuItens > .nav-link {
+    color: #3a3ca3;
+}
+
+.menuItens > .nav-link:hover {
+    color: #2f32db;
+}
+
+/** Header - Barra de pesquisa **/
+
+.search-bar {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.searchIcon {
+    background-color: #efefef;
+    color: #3a3ca3;
+    border-color: #3a3ca3;
+}
+
+.searchIcon:hover {
+    color: #3a3ca3;
+    border-color: #3a3ca3;
+}
+
+.searchInput {
+    background-color: #efefef !important;
+    border-color: #3a3ca3;
+    color: black !important;
+}
+
+.searchInput:focus {
+    border-color: #3a3ca3 !important;
+}
+
+.searchIcon:focus {
+    border-color: #3a3ca3;
+}
+
+.menu nav {
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+}
+
+body {
+    background: #3a3ca3;
+    color: black;
+    font-family: Georgia;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    background: #3a3ca3;
+    padding: 16px 0;
+    margin-bottom: 16px;
+}
+
+main {
+    background: #efefef;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 16px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    color: #3a3ca3;
+}
+
+.footer {
+    background: #3a3ca3;
+    color: #efefef;
+    width: 100%;
+    text-align: center;
+    padding: 24px;
+}
+
+.load-more {
+    text-align: end;
+}
+
+.btn-load-more {
+    color: #2f32db;
+    border-color: #2f32db;
+    margin-right: 12px;
+}
+
+.btn-load-more:hover {
+    color: gainsboro;
+    background-color: #2f32db;
+}
+
+.yt-video {
+    margin: 12px 0;
+}

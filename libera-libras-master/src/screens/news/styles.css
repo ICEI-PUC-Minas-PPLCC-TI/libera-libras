@@ -1,0 +1,10 @@
+.spotlight-area {
+    background-color: #9999ff;
+    padding: 24px 16px;
+    margin: 24px;
+    border-radius: 12px;
+}
+
+.news-item {
+    margin: 24px 0;
+}

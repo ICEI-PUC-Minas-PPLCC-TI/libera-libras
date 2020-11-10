@@ -1,0 +1,35 @@
+.oque {
+    color: #000279;
+    text-align: justify;
+    padding: 0 16px;
+    margin: 24px;
+}
+
+.porque {
+    background-color: #9999ff;
+    padding: 24px 16px;
+    margin: 24px;
+    border-radius: 12px;
+}
+
+.videos-container {
+    background-color: #9999ff;
+    padding: 24px 16px;
+    margin: 24px;
+    border-radius: 12px;
+}
+
+.video {
+    border: 2px solid #2f32db;
+    border-radius: 12px;
+    padding: 8px;
+    height: 100%;
+}
+
+.videos-row {
+    margin-bottom: 12px;
+}
+
+.video-box {
+    margin-bottom: 12px;
+}

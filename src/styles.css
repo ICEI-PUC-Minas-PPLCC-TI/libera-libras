@@ -33,3 +33,19 @@
 .video-box {
     margin-bottom: 12px;
 }
+
+.libera-title {
+    line-height: 2em;
+    font-size: 64px;
+    color: #1c1fc1;
+    font-weight: 750
+}
+
+@media only screen and (max-width: 576px) {
+    .libera-title {
+        font-size: 52px;
+        line-height: 1em;
+        color: #1c1fc1;
+        font-weight: 600
+    }
+}

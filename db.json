@@ -17,21 +17,24 @@
             "title": "Por que aprender Libras?",
             "url": "https://www.youtube.com/embed/vw4stB2__R4",
             "description": "Aprenda com o Marcos os 5 motivos para você aprender Libras",
-            "playlistId": 4
+            "playlistId": 4,
+            "informationsId": 7
         },
         {
             "id": 2,
             "title": "MÚSICA",
             "url": "https://www.youtube.com/embed/eGDkz44wHRk",
             "description": "Meu Abrigo - Melim",
-            "playlistId": 1
+            "playlistId": 1,
+            "informationsId": 8
         },
         {
             "id": 3,
             "title": "CORES EM LIBRAS",
             "url": "https://www.youtube.com/embed/8CGSZs8eSNU",
             "description": "Todos os sinais - Para iniciantes",
-            "playlistId": 1
+            "playlistId": 1,
+            "informationsId": 9
         },
         {
             "id": 4,
@@ -66,21 +69,24 @@
             "title": "Aula 1",
             "url": "https://www.youtube.com/embed/dkEcOoUEonk",
             "description": "<b>Canal:</b> Inala Costa",
-            "playlistId": 3
+            "playlistId": 3,
+            "informationsId": 4
         },
         {
             "id": 9,
             "title": "Aula 2",
             "url": "https://www.youtube.com/embed/9AA5cn19lCQ",
             "description": "<b>Canal:</b> Inala Costa",
-            "playlistId": 3
+            "playlistId": 3,
+            "informationsId": 5
         },
         {
             "id": 10,
             "title": "Aula 3",
             "url": "https://www.youtube.com/embed/mVtffcc_KXs",
             "description": "<b>Canal:</b> Inala Costa",
-            "playlistId": 3
+            "playlistId": 3,
+            "informationsId": 6
         },
         {
             "id": 11,
@@ -108,6 +114,7 @@
         {
             "id": 1,
             "name": "Aprenda Libras de forma divertida",
+            "categoriesIds": [1],
             "order": 1
         },
         {
@@ -133,7 +140,8 @@
             "content": "Os estudantes Thomas Pryor y Navid Azodi da Universidade de Washington criaram umas luvas que podem traduzir a linguagem de sinais em texto ou voz. Isso facilitaria a comunicação entre pessoas que não conhecem a linguagem de sinais...",
             "date": "2020-10-01",
             "url": "https://www.linkedin.com/posts/wedercosta_signaloud-ugcPost-6712359811868045312-0IZT/",
-            "imageUrl": "https://i.ytimg.com/vi/l01sdzJHCCM/maxresdefault.jpg"
+            "imageUrl": "https://i.ytimg.com/vi/l01sdzJHCCM/maxresdefault.jpg",
+            "informationsId": 1
         },
         {
             "id": 2,
@@ -141,7 +149,8 @@
             "content": "Regina Casé e sua filha Benedita, que é surda, explicam um pouco sobre a surdez, suas dificuldades e dão dicas de situações que os surdos passam.",
             "date": "2020-10-01",
             "url": "https://f5.folha.uol.com.br/celebridades/2020/09/no-dia-do-surdo-regina-case-fala-sobre-perda-de-audicao-da-filha-benedita.shtml",
-            "imageUrl": "https://cdn-ofuxico.akamaized.net/img/upload/noticias/2019/08/20/regina-case-fala-sobre-a-surdez-da-filha-video_356509_36.jpg"
+            "imageUrl": "https://cdn-ofuxico.akamaized.net/img/upload/noticias/2019/08/20/regina-case-fala-sobre-a-surdez-da-filha-video_356509_36.jpg",
+            "informationsId": 2
         },
         {
             "id": 3,
@@ -149,7 +158,102 @@
             "content": "Máscaras acentuam as dificuldades de comunicação de deficientes auditivos",
             "date": "2020-10-01",
             "url": "https://www.uol.com.br/vivabem/noticias/redacao/2020/09/26/mascaras-acentuam-as-dificuldades-de-comunicacao-de-deficientes-auditivos.html",
-            "imageUrl": "https://conteudo.imguol.com.br/c/entretenimento/b1/2020/09/24/surdos-e-o-uso-de-mascara-1600968606430_v2_900x506.jpg"
+            "imageUrl": "https://conteudo.imguol.com.br/c/entretenimento/b1/2020/09/24/surdos-e-o-uso-de-mascara-1600968606430_v2_900x506.jpg",
+            "informationsId": 3
+        }
+    ],
+    "informations": [
+        {
+            "title": "Sign Aloud",
+            "id": 1
+        },
+        {
+            "title": "Regina Casé e Benedita",
+            "id": 2
+        },
+        {
+            "title": "Mascaras para surdos",
+            "id": 3
+        },
+        {
+            "title": "Aula 1",
+            "id": 4,
+            "categoriesIds": [1]
+        },
+        {
+            "title": "Aula 2",
+            "id": 5,
+            "categoriesIds": [1]
+        },
+        {
+            "title": "Aula 3",
+            "id": 6,
+            "categoriesIds": [1]
+        },
+        {
+            "title": "Por que aprender Libras?",
+            "id": 7
+        },
+        {
+            "title": "MÚSICA",
+            "id": 8
+        },
+        {
+            "title": "CORES EM LIBRAS",
+            "id": 9
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Aulas"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "name": "Encontro de Libras",
+            "description": "Encontro para conversar em libras",
+            "date": "2020-11-20T17:00",
+            "place": "Praça da Liberdade",
+            "spotlight": true,
+            "cityId": 1
+        },
+        {
+            "id": 2,
+            "name": "Encontro de Libras",
+            "description": "Encontro para conversar em libras",
+            "date": "2020-11-28T18:00",
+            "place": "Praça da Liberdade",
+            "spotlight": true,
+            "cityId": 2
+        },
+        {
+            "id": 3,
+            "name": "Encontro de Libras",
+            "description": "Encontro para conversar em libras",
+            "date": "2020-11-25T17:00",
+            "place": "Praça da Liberdade",
+            "spotlight": true,
+            "cityId": 3
+        }
+    ],
+    "cities": [
+        {
+            "id": 1,
+            "name": "Belo Horizonte"
+        },
+        {
+            "id": 2,
+            "name": "São Paulo"
+        },
+        {
+            "id": 3,
+            "name": "Rio de Janeiro"
+        },
+        {
+            "id": 4,
+            "name": "Brasília"
         }
     ]
 }

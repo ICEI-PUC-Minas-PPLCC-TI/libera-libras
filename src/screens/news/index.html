@@ -15,7 +15,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../../scripts/proxy.js"></script>
-    <script src="app.js"></script>
+   
 </head>
 
 <body>
@@ -36,10 +36,10 @@
                     <nav class="navbar-nav menuItens">
                         <a class="nav-link" href="../../">Home</a>
                         <a class="nav-link" href="../contents">Conteúdos</a>
-                        <a class="nav-link" href="#">Sobre</a>
+                        <a class="nav-link" href="../sobre/">Sobre</a>
                         <a class="nav-link" href="#">Notícias</a>
                         <a class="nav-link" href="#">Fórum</a>
-                        <a class="nav-link" href="#">Eventos</a>
+                        <a class="nav-link" href="../events/">Eventos</a>
                     </nav>
                     <div class="input-group search-bar mt-3 mb-3">
                         <div class="input-group-prepend searchIcon">
@@ -101,6 +101,27 @@
             </div>
         </section>
 
+        <!--Comentário usando js -->
+<h1>Comentário</h1>
+<button id="btnCarregaDados">Últimos Comentários</button> 
+
+<div id="tela"></div>
+
+<form id="formCometarios">
+   <label for="Nome">Nome:</label>
+       <input type="text" id="campoNome" placeholder="Escreva seu nome"><br>
+  
+   <div class="mb-4">
+   <label for="Nome">Comentário<br></label>
+   
+   <textarea name="tMsg"id="cMsg" placeholder="Deixe sua mensagem"></textarea>
+  <!--<textarea name="tMsg"id="cMsg" cols="100" rows="7" placeholder="Deixe sua mensagem"></textarea> -->
+</div>
+   <button id ="btnIncluirComentarios">Salvar</button>
+</p>
+</form>
+       <!--Fim Comentário-->
+
 
     </main>
 
@@ -111,6 +132,7 @@
     </footer>
 
     </div>
+    <script src="app.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

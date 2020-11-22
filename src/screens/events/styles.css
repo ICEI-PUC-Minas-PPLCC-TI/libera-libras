@@ -1,0 +1,93 @@
+.event-box {
+    margin: 8px 0;
+}
+
+.event-box > div {
+    border: 2px solid #3a3ca3;
+    background-color: #3a3ca3;
+    border-radius: 12px;
+    margin: 0 12px;
+}
+
+.event-day {
+    color: #ffffff;
+}
+
+.event-date,
+.event-time {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.not-found-div {
+    text-align: center;
+}
+
+label {
+    color: #3a3ca3;
+}
+
+.btn-primary {
+    background-color: #3a3ca3;
+    border-color: #3a3ca3;
+}
+
+.btn-primary:hover {
+    background-color: #2f32db;
+    border-color: #2f32db;
+}
+
+.btn-primary:disabled {
+    background-color: #9999ff;
+    border-color: #9999ff;
+}
+
+.form-row {
+    margin: 20px 0;
+    margin-top: 0;
+}
+
+.not-found {
+    max-width: 128px
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+textarea {
+    resize: none;
+}
+
+.event-details {
+    background-color: #efefef;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.your-city-menu {
+    margin: 16px 0
+}
+
+#eventCity {
+    margin: 12px 0;
+}
+
+.select-your-city {
+    border-color: #3a3ca3;
+    background-color: #efefef;
+}
+
+.select-city > option:first-child {
+    color: gray;
+}
+
+.select-city > option:checked {
+    color: #3a3ca3;
+}
+
+.select-city-area {
+    color: #3a3ca3;
+}

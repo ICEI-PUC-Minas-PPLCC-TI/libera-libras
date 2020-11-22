@@ -17,6 +17,31 @@ function htmlGetRequest(url, callback) {
     request.send();
 }
 
+function htmlPostRequest(url, body, callback) {
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function () {
+        console.log(request);
+        if (
+            request.readyState == XMLHttpRequest.DONE &&
+            (request.status == 200 || request.status == 201)
+        ) {
+            let data = JSON.parse(request.response);
+            callback(data);
+        }
+    };
+    
+    request.open("POST", apiUrl + url);
+    request.setRequestHeader("Content-Type", "application/json");
+    request.send(body);
+}
+
+function getCities(callback) {
+    let url = "cities";
+
+    htmlGetRequest(url, callback);
+}
+
 function getSpotlightVideo(screen, callback) {
     let url = "spotlightVideos?_expand=video&screen=" + screen;
 
@@ -31,6 +56,25 @@ function getPlaylistById(id, callback) {
 
 function getSpotlightPlaylist(callback) {
     let url = "playlists?order=0&_embed=videos";
+
+    htmlGetRequest(url, callback);
+}
+
+function getSpotlightEvents(callback) {
+    let date = new Date().toISOString().slice(0, 16);
+    let url =
+        "events?spotlight=true&_sort=date&_order=asc&_expand=city&date_gte=" +
+        date;
+
+    htmlGetRequest(url, callback);
+}
+
+function getEventsByCity(callback, city = 0) {
+    let date = new Date().toISOString().slice(0, 16);
+    let url = "events?_sort=date&_order=asc&_expand=city&date_gte=" + date;
+    if (city != 0) {
+        url += "&cityId=" + city;
+    }
 
     htmlGetRequest(url, callback);
 }
@@ -62,4 +106,16 @@ function getNewsbyPage(page, pageSize, callback) {
         "news?_sort=date&_order=desc&_page=" + page + "&_limit=" + pageSize;
 
     htmlGetRequest(url, callback);
+}
+
+function postEvent (body, callback) {
+    let url = "events"
+
+    htmlPostRequest(url, JSON.stringify(body), callback);
+}
+
+function postCity (body, callback) {
+    let url = "cities";
+
+    htmlPostRequest(url, JSON.stringify(body), callback);
 }

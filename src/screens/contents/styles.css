@@ -4,7 +4,10 @@
     margin: 24px;
     border-radius: 12px;
 }
+#tela {
+    background-color:#d3cccc ;
 
+}
 .videos-container {
     background-color: #9999ff;
     padding: 24px 16px;

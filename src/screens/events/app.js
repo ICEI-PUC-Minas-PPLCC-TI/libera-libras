@@ -134,12 +134,14 @@ function createEvent () {
         cityId: "",
     };
 
-    if ($("#createCitySelect").val() == 0) {
+    //todo: permitir criar cidade
+    /*if ($("#createCitySelect").val() == 0) {
         postCity(
             { name: $("#eventCity").val() },
             (data) => (eventToCreate.cityId = data.id)
         );
-    } else if ($("#createCitySelect").val() > 0) {
+    } else */
+    if ($("#createCitySelect").val() > 0) {
         eventToCreate.cityId = $("#createCitySelect").val();
     } else {
         alert ("Houve um problema");
@@ -152,7 +154,7 @@ function createEvent () {
 function checkForm () {
     if ($("#eventName").val() && $("#eventDescription").val() &&
         $("#eventDate").val() && $("#eventTime").val() &&
-        (($("#createCitySelect").val() == 0 && $("#eventCity").val())) ||
+        //(($("#createCitySelect").val() == 0 && $("#eventCity").val())) ||
         ($("#createCitySelect").val() > 0 ) && 
         $("#eventAddr").val()) {
     
@@ -162,13 +164,14 @@ function checkForm () {
     }
 }
 
-function enableCityField (event) {
+// todo: permitir criar cidade
+/*function enableCityField (event) {
     if ($(this).val() == 0) {
         $("#eventCity").removeClass("d-none");
     } else {
         $("#eventCity").addClass("d-none");
     }
-}
+}*/
 
 
 
@@ -180,7 +183,7 @@ function start() {
     getEventsByCity(updateCityEvents, cityCode);
 
     $("#eventCity").addClass("d-none");
-    $("#createCitySelect").change(enableCityField);
+    //$("#createCitySelect").change(enableCityField);
     
     $(".form-field").change(checkForm);
 

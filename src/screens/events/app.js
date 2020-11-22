@@ -73,7 +73,7 @@ function updateCityEvents(data) {
     let cityEventSection = document.getElementById("cityEventSection");
     let eventBox = cityEventSection.getElementsByClassName("event-box")[0];
     cityEventSection.innerHTML = "";
-    
+
     if (events && events.length) {
         events.forEach((event, index) => {
             let thisEventDiv;
@@ -85,7 +85,7 @@ function updateCityEvents(data) {
                 thisEventDiv = eventBox.cloneNode(true);
                 cityEventSection.appendChild(thisEventDiv);
             }
-            
+
             updateEventDiv(event, thisEventDiv);
         });
     } else {
@@ -99,23 +99,78 @@ function updateCityEvents(data) {
 
 function updateCities(data) {
     let cities = data;
-    let select = document.getElementById("citySelect");
-    let option = select.getElementsByTagName("option")[1];
+    let selects = document.getElementsByClassName("select-city");
+    
+    for (let i = 0; i<selects.length; i++) {
+        let option = selects[i].getElementsByTagName("option")[1];
 
-    cities.forEach((city) => {
-        let thisOption;
+        cities.forEach((city) => {
+            let thisOption;
 
-        if (option.value) {
-            thisOption = option.cloneNode(true);
-            select.appendChild(thisOption);
-        } else {
-            thisOption = option;
-        }
+            if (option.value) {
+                thisOption = option.cloneNode(true);
+                selects[i].appendChild(thisOption);
+            } else {
+                thisOption = option;
+            }
 
-        thisOption.value = city.id;
-        thisOption.innerHTML = city.name;
-    });
+            thisOption.value = city.id;
+            thisOption.innerHTML = city.name;
+        });
+    }
 }
+
+function reloadPage(data) {
+    location.reload()
+}
+
+function createEvent () {
+    let eventToCreate = {
+        name: $("#eventName").val(),
+        description: $("#eventDescription").val(),
+        date: $("#eventDate").val() +"T"+ $("#eventTime").val(),
+        place: "Praça da Liberdade",
+        spotlight: false,
+        cityId: "",
+    };
+
+    if ($("#createCitySelect").val() == 0) {
+        postCity(
+            { name: $("#eventCity").val() },
+            (data) => (eventToCreate.cityId = data.id)
+        );
+    } else if ($("#createCitySelect").val() > 0) {
+        eventToCreate.cityId = $("#createCitySelect").val();
+    } else {
+        alert ("Houve um problema");
+        throw "selectError"
+    }
+
+    postEvent(eventToCreate, reloadPage);
+}
+
+function checkForm () {
+    if ($("#eventName").val() && $("#eventDescription").val() &&
+        $("#eventDate").val() && $("#eventTime").val() &&
+        (($("#createCitySelect").val() == 0 && $("#eventCity").val())) ||
+        ($("#createCitySelect").val() > 0 ) && 
+        $("#eventAddr").val()) {
+    
+        $("#submitEvent").prop("disabled", false).click(createEvent);
+    } else {
+        $("#submitEvent").prop("disabled", true).click();
+    }
+}
+
+function enableCityField (event) {
+    if ($(this).val() == 0) {
+        $("#eventCity").removeClass("d-none");
+    } else {
+        $("#eventCity").addClass("d-none");
+    }
+}
+
+
 
 function start() {
     let cityCode = document.getElementById("citySelect").value;
@@ -123,6 +178,29 @@ function start() {
     getCities(updateCities);
     getSpotlightEvents(updateSpotlightEvents);
     getEventsByCity(updateCityEvents, cityCode);
+
+    $("#eventCity").addClass("d-none");
+    $("#createCitySelect").change(enableCityField);
+    
+    $(".form-field").change(checkForm);
+
+    // só permite datas futuras
+    $(function(){
+    var dtToday = new Date();
+
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+
+    var minDate = year + '-' + month + '-' + day;    
+    $('#eventDate').attr('min', minDate);
+});
 }
 
 $(document).ready(start);
+

@@ -90,15 +90,16 @@
             </div>
             <div class="col-12 col-md-4 selection-box city-selection">
                 <div class="select-outline select-city-area">
-                    <select id="citySelect" class="form-control select-city" onchange="getEventsByCity(updateCityEvents, this.value)">
+                    <select id="citySelect" class="form-control select-city select-your-city"
+                        onchange="getEventsByCity(updateCityEvents, this.value)">
                         <option value=0 selected>Todas</option>
                         <option></option>
                     </select>
                 </div>
             </div>
             <div class="col-12 load-more">
-                <button type="button" class="btn btn-outline btn-load-more btn-load-more"><i class="fa fa-plus"
-                        aria-hidden="true"></i>
+                <button type="button" class="btn btn-outline btn-load-more btn-load-more" data-toggle="modal"
+                    data-target="#createEventModal"><i class="fa fa-plus" aria-hidden="true"></i>
                     Criar Evento</button>
             </div>
         </section>
@@ -125,139 +126,67 @@
             </div>
         </section>
 
-        <!--section class="videos-section">
-            <h1 class="title">Vídeos</h1>
-            <div class="videos">
-                <h3 class="title"></h3>
-                <div class="videos-container">
-                    <div class="row videos-row">
-                        <div class="col-12 col-md-6 video-box">
-                            <div class="video">
-                                <h2 class="title"></h2>
-                                <div class="embed-responsive embed-responsive-16by9 yt-video">
-                                    <iframe width="400" height="225" src="about:blank" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+        <div class="modal fade" id="createEventModal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Criar Evento</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <div class="form-row">
+                                <div class="col nowrap">
+                                    <label for="eventName">Nome:</label>
+                                    <input id="eventName" type="text" class="form-control form-field" placeholder="Nome do Evento" required>
                                 </div>
-                                <h5 class="description"></h5>
+                            </div>
+                            <div class="form-row">
+                                <div class="col nowrap">
+                                    <label for="eventDescription">Descrição:</label>
+                                    <textarea class="form-control form-field" id="eventDescription" rows="3" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col nowrap">
+                                    <label for="eventDate">Data:</label>
+                                    <input id="eventDate" type="date" class="form-control form-field" required>
+                                </div>
+                                <div class="col nowrap">
+                                    <label for="eventTime">Hora:</label>
+                                    <input id="eventTime" type="time" class="form-control form-field" required>
+                                </div>
+                            </div>
+                            <label for="eventLoc">Local:</label>
+                            <div id="eventLoc" class="form-row">
+                                <div class="col nowrap">
+                                    <label for="createCitySelect">Cidade:</label>
+                                    <div class="select-outline select-city-area">
+                                        <select id="createCitySelect" class="form-control select-city form-field">
+                                            <option value="" selected></option>
+                                            <option value=0>Outra</option>
+                                        </select>
+                                    </div>
+                                    <input id="eventCity" type="text" class="form-control form-field" placeholder="Nome da Cidade">
+                                </div>
+                                
+                                <div class="col nowrap">
+                                    <label for="eventAddr">Endereço:</label>
+                                    <input id="eventAddr" type="text" class="form-control form-field" placeholder="Local de Encontro" required>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="load-more">
-                        <button type="button" class="btn btn-outline btn-load-more btn-load-more"><i class="fa fa-plus"
-                                aria-hidden="true"></i>
-                            Carregar mais videos</button>
-                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button id="submitEvent" type="button" class="btn btn-primary" type="submit" disabled>Criar Evento</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </section>
-
-        <div class="row news-about">
-            <section class="news col-12 col-md-8">
-                <h1 class="title">Notícias</h1>
-
-                <div class="news-container container">
-                    <div class="news-item row">
-                        <div class="news-image col-12 col-lg-4">
-                            <img class="embed-responsive embed-responsive-16by9" src="about:blank">
-                        </div>
-                        <div class="col-12 col-lg-8">
-                            <h2 class="news-title">
-                                <span class="date"></span> - <span class="title"></span>
-                            </h2>
-                            <p class="content"></p>
-                            <a class="link"
-                                href="about:blank">Leia
-                                mais </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="extra-column col-12 col-md-4 container">
-                <div class="about-column">
-                    <h2 class="title">Sobre</h2>
-
-                    <div class="about-text">
-                        <p>
-                            Este site foi desenvolvido para agregar assuntos relacionados ao aprendizado em libras,
-                            buscando
-                            facilitar o encontro desses conteúdos, por quem se interesse e também buscando fazer com que
-                            mais
-                            pessoas se juntem a inclusão dos surdos, que necessitam de que mais pessoas saibam se
-                            comunicar com
-                            eles
-                        </p>
-                    </div>
-                </div>
-                <div class="edit-column">
-                    <h2 class="title">Editorial</h2>
-                    <div class="col-0 col-md-12 edit-info">
-                        <ul class="editorial fa-ul">
-                            <li><span class="fa-li"><i class="fa fa-user" aria-hidden="true"></i></span>Gustavo Araújo
-                            </li>
-                            <li><span class="fa-li"><i class="fa fa-user" aria-hidden="true"></i></span>Layla Raissa
-                            </li>
-                            <li><span class="fa-li"><i class="fa fa-user" aria-hidden="true"></i></span>Leonardo Gomide
-                            </li>
-                            <li><span class="fa-li"><i class="fa fa-user" aria-hidden="true"></i></span>Pedro Tolentino
-                            </li>
-                            <li><span class="fa-li"><i class="fa fa-user" aria-hidden="true"></i></span>Rodrigo
-                                Vassilakis</li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="social-column">
-                    <h2 class="title">Redes Sociais</h2>
-
-                    <div class="col-12 social-icons">
-                        <a class="social-link social-github"
-                            href="https://github.com/GomideLeo/Portal-de-Filmes-Pipoca-Filmes" target="_blank">
-                            <div class="social-box">
-                                <p><i class="fa fa-github" aria-hidden="true"></i></p>
-                            </div>
-                        </a>
-                        <a class="social-link social-twitter" href="https://twitter.com/gomide_leo" target="_blank">
-                            <div class="social-box">
-                                <p><i class="fa fa-twitter" aria-hidden="true"></i></p>
-                            </div>
-                        </a>
-                        <a class="social-link social-instagram" href="https://www.instagram.com/gomide_leo/"
-                            target="_blank">
-                            <div class="social-box">
-                                <p><i class="fa fa-instagram" aria-hidden="true"></i></p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!--section id="aqui-fica-o-texto-e-as-redes-sociais" class="col-12 col-sm-12 col-md-4 col-lg-4">
-    
-                <h1>Sobre</h1>
-                <p>Este site foi desenvolvido para agregar assuntos relacionados ao aprendizado em libras,
-                    buscando
-                    facilitar o encontro desses conteúdos, por quem se interesse e também buscando fazer com que
-                    mais
-                    pessoas se juntem a inclusão dos surdos, que necessitam de que mais pessoas saibam se
-                    comunicar com
-                    eles
-                </p>
-                <h1>Editorial</h1>
-                <p><strong>Equipe Criadora:</strong></p>
-                <p>Layla Raissa / Leonardo Gomide / Rodrigo Vassilakis / Gustavo Araújo / Pedro Tolentino</p>
-                <p><strong>Siga-nos:</strong></p>
-                <p>Instagram &nbsp;&nbsp;&nbsp;&nbsp; Facebook </p>
-    
-    
-                <p><strong>Contato:</strong>
-                <p>
-                <p>Telefone: (XX) XXXX-XXXX</p>
-                <p>teste@gmail.com</p>
-            </section-->
         </div>
-
 
     </main>
     <!--Rodape-Final do site-->

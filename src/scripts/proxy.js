@@ -24,7 +24,7 @@ function htmlPostRequest(url, body, callback) {
         console.log(request);
         if (
             request.readyState == XMLHttpRequest.DONE &&
-            request.status == 201
+            (request.status == 200 || request.status == 201)
         ) {
             let data = JSON.parse(request.response);
             callback(data);
@@ -32,7 +32,7 @@ function htmlPostRequest(url, body, callback) {
     };
     
     request.open("POST", apiUrl + url);
-    xhr.setRequestHeader("Content-Type", "application/json");
+    request.setRequestHeader("Content-Type", "application/json");
     request.send(body);
 }
 
@@ -111,5 +111,11 @@ function getNewsbyPage(page, pageSize, callback) {
 function postEvent (body, callback) {
     let url = "events"
 
-    htmlPostRequest(url, body, callback)
+    htmlPostRequest(url, JSON.stringify(body), callback);
+}
+
+function postCity (body, callback) {
+    let url = "cities";
+
+    htmlPostRequest(url, JSON.stringify(body), callback);
 }

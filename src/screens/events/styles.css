@@ -23,8 +23,40 @@
     text-align: center;
 }
 
+label {
+    color: #3a3ca3;
+}
+
+.btn-primary {
+    background-color: #3a3ca3;
+    border-color: #3a3ca3;
+}
+
+.btn-primary:hover {
+    background-color: #2f32db;
+    border-color: #2f32db;
+}
+
+.btn-primary:disabled {
+    background-color: #9999ff;
+    border-color: #9999ff;
+}
+
+.form-row {
+    margin: 20px 0;
+    margin-top: 0;
+}
+
 .not-found {
     max-width: 128px
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+textarea {
+    resize: none;
 }
 
 .event-details {
@@ -39,7 +71,11 @@
     margin: 16px 0
 }
 
-.select-city {
+#eventCity {
+    margin: 12px 0;
+}
+
+.select-your-city {
     border-color: #3a3ca3;
     background-color: #efefef;
 }

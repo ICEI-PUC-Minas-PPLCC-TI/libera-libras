@@ -129,7 +129,7 @@ function createEvent () {
         name: $("#eventName").val(),
         description: $("#eventDescription").val(),
         date: $("#eventDate").val() +"T"+ $("#eventTime").val(),
-        place: $("#eventLoc"),
+        place: $("#eventLoc").val(),
         spotlight: false,
         cityId: "",
     };

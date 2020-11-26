@@ -129,7 +129,7 @@ function createEvent () {
         name: $("#eventName").val(),
         description: $("#eventDescription").val(),
         date: $("#eventDate").val() +"T"+ $("#eventTime").val(),
-        place: "Praça da Liberdade",
+        place: $("#eventLoc"),
         spotlight: false,
         cityId: "",
     };
@@ -156,7 +156,7 @@ function checkForm () {
         $("#eventDate").val() && $("#eventTime").val() &&
         //(($("#createCitySelect").val() == 0 && $("#eventCity").val())) ||
         ($("#createCitySelect").val() > 0 ) && 
-        $("#eventAddr").val()) {
+        $("#eventLoc").val()) {
     
         $("#submitEvent").prop("disabled", false).click(createEvent);
     } else {

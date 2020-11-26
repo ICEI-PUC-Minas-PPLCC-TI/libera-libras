@@ -97,7 +97,7 @@ function imprimeDados (dados) {
     let strHtml = '';
     let objDados = leDados ();
     for (i=0; i< objDados.Comentário.length; i++) {
-        strHtml += `<p>${objDados.Comentário[i].Nome}-${objDados.Comentário[i].Comentário}</p>`
+        strHtml += `<p>${objDados.Comentário[i].Nome}: ${objDados.Comentário[i].Comentário}</p>`
     }
     tela.innerHTML = strHtml;
 }

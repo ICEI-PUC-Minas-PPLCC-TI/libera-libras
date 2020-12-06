@@ -16,3 +16,19 @@
     width:80%;
     height:200px;
 }
+#descricao{
+    text-align:center;
+}
+.lançamentos{
+    text-align:center; 
+} 
+
+img.imagem{
+    text-align:center;
+}
+h1.lancamentos{
+    color:black;
+    text-align:center;
+    font-size: 60px;
+}
+/*rgb(139, 20, 139); */

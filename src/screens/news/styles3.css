@@ -13,6 +13,13 @@
 
 }
 #cMsg{
-    width:100%;
+    width:80%;
     height:200px;
+}
+#btnIncluirComentarios{
+    background-color: rgb(64, 204, 30);
+    color:white;
+}
+#btnCarregaDados{
+background-color: #9999ff;
 }

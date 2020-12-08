@@ -100,8 +100,8 @@ function updateCityEvents(data) {
 function updateCities(data) {
     let cities = data;
     let selects = document.getElementsByClassName("select-city");
-    
-    for (let i = 0; i<selects.length; i++) {
+
+    for (let i = 0; i < selects.length; i++) {
         let option = selects[i].getElementsByTagName("option")[1];
 
         cities.forEach((city) => {
@@ -121,14 +121,14 @@ function updateCities(data) {
 }
 
 function reloadPage(data) {
-    location.reload()
+    location.reload();
 }
 
-function createEvent () {
+function createEvent() {
     let eventToCreate = {
         name: $("#eventName").val(),
         description: $("#eventDescription").val(),
-        date: $("#eventDate").val() +"T"+ $("#eventTime").val(),
+        date: $("#eventDate").val() + "T" + $("#eventTime").val(),
         place: $("#eventLoc").val(),
         spotlight: false,
         cityId: "",
@@ -144,20 +144,22 @@ function createEvent () {
     if ($("#createCitySelect").val() > 0) {
         eventToCreate.cityId = $("#createCitySelect").val();
     } else {
-        alert ("Houve um problema");
-        throw "selectError"
+        alert("Houve um problema");
+        throw "selectError";
     }
 
     postEvent(eventToCreate, reloadPage);
 }
 
-function checkForm () {
-    if ($("#eventName").val() && $("#eventDescription").val() &&
-        $("#eventDate").val() && $("#eventTime").val() &&
-        //(($("#createCitySelect").val() == 0 && $("#eventCity").val())) ||
-        ($("#createCitySelect").val() > 0 ) && 
-        $("#eventLoc").val()) {
-    
+function checkForm() {
+    if (
+        $("#eventName").val() &&
+        $("#eventDescription").val() &&
+        $("#eventDate").val() &&
+        $("#eventTime").val() &&
+        $("#createCitySelect").val() > 0 &&
+        $("#eventLoc").val()
+    ) {
         $("#submitEvent").prop("disabled", false).click(createEvent);
     } else {
         $("#submitEvent").prop("disabled", true).click();
@@ -173,8 +175,6 @@ function checkForm () {
     }
 }*/
 
-
-
 function start() {
     let cityCode = document.getElementById("citySelect").value;
 
@@ -184,26 +184,23 @@ function start() {
 
     $("#eventCity").addClass("d-none");
     //$("#createCitySelect").change(enableCityField);
-    
+
     $(".form-field").change(checkForm);
 
     // só permite datas futuras
-    $(function(){
-    var dtToday = new Date();
+    $(function () {
+        var dtToday = new Date();
 
-    var month = dtToday.getMonth() + 1;
-    var day = dtToday.getDate();
-    var year = dtToday.getFullYear();
+        var month = dtToday.getMonth() + 1;
+        var day = dtToday.getDate();
+        var year = dtToday.getFullYear();
 
-    if(month < 10)
-        month = '0' + month.toString();
-    if(day < 10)
-        day = '0' + day.toString();
+        if (month < 10) month = "0" + month.toString();
+        if (day < 10) day = "0" + day.toString();
 
-    var minDate = year + '-' + month + '-' + day;    
-    $('#eventDate').attr('min', minDate);
-});
+        var minDate = year + "-" + month + "-" + day;
+        $("#eventDate").attr("min", minDate);
+    });
 }
 
 $(document).ready(start);
-

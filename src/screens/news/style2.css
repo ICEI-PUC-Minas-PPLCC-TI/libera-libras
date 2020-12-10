@@ -31,6 +31,9 @@ h1.lancamentos{
     text-align:center;
     font-size: 60px;
 }
+h2.titulo{
+    color:#7171ce;
+}
 /*rgb(139, 20, 139); */
 #btnIncluirComentarios{
     background-color: rgb(64, 204, 30);

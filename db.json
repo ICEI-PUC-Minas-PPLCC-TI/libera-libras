@@ -263,5 +263,16 @@
             "id": 6,
             "name": "Outra"
         }
+    ],
+    "suggestions": [
+        { "title": "Lucas Magalhaes", "desc": "Otima interface!" },
+        {
+            "title": "Luca Fonseca",
+            "desc": "Muito boa ideia! Sofro muito por ser mudo e ninguem saber conversar por libras."
+        },
+        {
+            "title": "Luisa Alcantra",
+            "desc": "Muito boa ideia, o estudo de libras deveria ser uma materia na escola!"
+        }
     ]
 }

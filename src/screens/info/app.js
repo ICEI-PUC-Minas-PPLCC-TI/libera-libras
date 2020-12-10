@@ -8,6 +8,26 @@ function getSearchParam(field) {
     return params.get(field);
 }
 
+function fillSugestions(data) {
+    comments = data;
+    let newsFeed = document.getElementById("newsFeed");
+
+    comments.forEach((comment) => {
+        let box = `<div class="card mb-3 col-12">
+            <div class="row no-gutters">
+            <div class="col-12">
+            <div class="card-body">
+            <h5 class="card-title">${comment.name}</h5>
+            <p class="card-text">${comment.desc}
+            </p>
+            </div>
+            </div>
+            </div>
+        </div>`;
+
+        newsFeed.innerHTML += box;
+    });
+}
 
 function completeSugestions(data) {
     let newsFeed = document.getElementById("newsFeed");
@@ -88,26 +108,7 @@ function fillInfos(data) {
 
 let comments = [];
 
-function fillSugestions(data) {
-    comments = data;
-    let newsFeed = document.getElementById("newsFeed");
 
-    comments.forEach((comment) => {
-        let box = `<div class="card mb-3 col-12">
-            <div class="row no-gutters">
-            <div class="col-12">
-            <div class="card-body">
-            <h5 class="card-title">${comment.name}</h5>
-            <p class="card-text">${comment.desc}
-            </p>
-            </div>
-            </div>
-            </div>
-        </div>`;
-
-        newsFeed.innerHTML += box;
-    });
-}
 
 
 $(document).ready(function () {

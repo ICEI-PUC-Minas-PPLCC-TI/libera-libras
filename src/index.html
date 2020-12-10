@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles/baseStyles.css">
+    <link rel="icon" type="image/png" href="../../assets/LogoMini.png" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/proxy.js"></script>
-   
+
 
 </head>
 
@@ -57,7 +58,7 @@
     <!-- Conteúdo do site-->
 
     <main class="container">
-        
+
         <section class="row sobre">
             <div class="col-12">
                 <h1 class="title libera-title">Libera Libras</h1>
@@ -112,53 +113,97 @@
                         </div>
                     </div>
                     <div class="load-more">
-                        <button type="button" class="btn btn-outline btn-load-more btn-load-more"><i
-                                class="fa fa-plus" aria-hidden="true"></i>
+                        <button type="button" class="btn btn-outline btn-load-more btn-load-more"><i class="fa fa-plus"
+                                aria-hidden="true"></i>
                             Carregar mais videos</button>
                     </div>
                 </div>
             </div>
         </section>
 
-       <!--Comentário usando js -->
-<h1>Comentários</h1>
-
-
-<form id="formCometarios">
-   <label for="Nome">Nome:</label>
-       <input type="text" id="campoNome" placeholder="Escreva seu nome"><br>
-  
-   <div class="mb-4">
-   <label for="Nome">Comentário:</label><br>
-   
-   <textarea name="tMsg"id="cMsg" placeholder="Deixe sua mensagem"></textarea>
-  <!--<textarea name="tMsg"id="cMsg" cols="100" rows="7" placeholder="Deixe sua mensagem"></textarea> -->
-</div>
-    <button id ="btnIncluirComentarios">Salvar</button>
-</p>
-</form>
-<button id="btnCarregaDados">Últimos Comentários</button> 
-<div id="tela"></div>
-
-       <!--Fim Comentário-->
+        <div class="container">
+            <h1>Comentários:</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="title1 ml-2">
+                        <h3 class="section-title">Envie comentários:</h3>
+                    </div>
+                    <div class="sugest">
+                        <form id="register" method="post" class="formulario col-12">
+                            <div class="row">
+                                <span id="instrucoes"></span>
+                                <div class="col-12">
+                                    <p>
+                                        <label for="titleForm">Nome:</label>
+                                        <input type="text" id="titleForm" name="titleForm" class="form-control form-field"
+                                            placeholder="Escreva seu nome..." />
+                                    </p>
+                                </div>
+                                <div class="col-12">
+                                    <p>
+                                        <label for="descForm">Comentário:</label>
+                                        <br>
+                                        <textarea id="descForm" name="descForm" class="form-control form-field" rows="4"
+                                            placeholder="Escreva seu comentário..."></textarea>
+                                    </p>
+                                </div>
+                            </div>
+                            <p><button type="submit" class="btn btn-primary">Confirmar</button></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="title1">
+                        <h3 class="section-title ml-2">Últimos Comentários:</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="newsFeed">
+            </div>
+        </div>
 
     </main>
     <footer class="container footer">
-        <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Flibera-libras.herokuapp.com" target="_blank" rel="noopener" aria-label="Facebook">
-            <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--medium"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg></div>Facebook</div>
+        <a class="resp-sharing-button__link"
+            href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Flibera-libras.herokuapp.com" target="_blank"
+            rel="noopener" aria-label="Facebook">
+            <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--medium">
+                <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+                        </svg></div>Facebook
+            </div>
         </a>
-      
-        <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Libera%20Libras&amp;url=https%3A%2F%2Flibera-libras.herokuapp.com" target="_blank" rel="noopener" aria-label="Twitter">
-            <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--medium"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg></div>Twitter</div>
+
+        <a class="resp-sharing-button__link"
+            href="https://twitter.com/intent/tweet/?text=Libera%20Libras&amp;url=https%3A%2F%2Flibera-libras.herokuapp.com"
+            target="_blank" rel="noopener" aria-label="Twitter">
+            <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--medium">
+                <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" />
+                        </svg></div>Twitter
+            </div>
         </a>
-      
-        <a class="resp-sharing-button__link" href="whatsapp://send?text=Libera%20Libras.%20https%3A%2F%2Flibera-libras.herokuapp.com" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--medium"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg></div>WhatsApp</div>
+
+        <a class="resp-sharing-button__link"
+            href="whatsapp://send?text=Libera%20Libras.%20https%3A%2F%2Flibera-libras.herokuapp.com" target="_blank"
+            rel="noopener" aria-label="WhatsApp">
+            <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--medium">
+                <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z" />
+                        </svg></div>WhatsApp
+            </div>
         </a>
-        <br/>
+        <br />
         Copyright 2020 - Disciplina de Desenvolvimento de Interfaces Web - <strong>ICEI PUC Minas</strong>
     </footer>
 

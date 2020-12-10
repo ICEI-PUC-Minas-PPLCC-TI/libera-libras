@@ -1,5 +1,5 @@
 function newsFeedBox(title, desc) {
-    this.title = title;
+    this.name = title;
     this.desc = desc;
 }
 
@@ -7,27 +7,48 @@ let suggestions = [];
 
 function fillSugestions(data) {
     suggestions = data;
-
-    for (x = suggestions.length - 1; x >= 0; x--) {
-        let newsFeed = document.getElementById("newsFeed");
-
+    let newsFeed = document.getElementById("newsFeed");
+    
+    suggestions.forEach(suggestion => {
+        
         let box = `<div class="card mb-3 col-12">
             <div class="row no-gutters">
-            <div class="col-md-8">
+            <div class="col-12">
             <div class="card-body">
-            <h5 class="card-title">${suggestions[x].title}</h5>
-            <p class="card-text">${suggestions[x].desc}
+            <h5 class="card-title">${suggestion.name}</h5>
+            <p class="card-text">${suggestion.desc}
+            </p>
+            </div>
+            </div>
+            </div>
+        </div>`;
+        
+        newsFeed.innerHTML += box;
+    });
+}
+
+function completeSugestions (data) {
+    let newsFeed = document.getElementById("newsFeed");
+
+    let suggestion = data;
+
+    let box = `<div class="card mb-3 col-12">
+            <div class="row no-gutters">
+            <div class="col-12">
+            <div class="card-body">
+            <h5 class="card-title">${suggestion.name}</h5>
+            <p class="card-text">${suggestion.desc}
             </p>
             </div>
             </div>
             </div>
         </div>`;
 
-        newsFeed.innerHTML += box;
-    }
+    newsFeed.innerHTML += box;
+        titleForm.value = "";
+        descForm.value = "";
+        
 }
-
-
 
 
 window.onload = () => {
@@ -50,26 +71,11 @@ window.onload = () => {
             instrucoes.innerHTML = "";
             instrucoes.classList.remove("erro");
 
-            localStorage.setItem('suggestions', JSON.stringify(suggestions));
+            postSuggestions(info, completeSugestions);
 
             newsFeed = document.getElementById('newsFeed');
-
-            box = `<div class="card mb-3 col-12">
-                                <div class="row no-gutters">
-                                    <div class="col-md-8">
-                                    <div class="card-body">
-                                            <h5 class="card-title">${suggestions[suggestions.length - 1].title}</h5>
-                                            <p class="card-text">${suggestions[suggestions.length - 1].desc}
-                                            </p>
-                                            </div>
-                                </div>
-                            </div>`;
-
-            newsFeed.innerHTML += box;
-
-            titleForm.value = "";
-            descForm.value = "";
-
+            
+        
         }
         e.preventDefault();
     }

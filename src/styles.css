@@ -60,7 +60,36 @@
 #btnIncluirComentarios{
     background-color: rgb(64, 204, 30);
     color:white;
+    font-weight:700;
+    border:none;
+    box-shadow: 0 5px 0  rgb(49, 146, 25);
+}
+#btnIncluirComentarios:hover{
+    background-color: rgb(49, 146, 25);
+    color:white;
+    font-weight:700;
+    border:none;
+    box-shadow: 0 5px 0  rgb(32, 95, 16);
+}
+#btnIncluirComentarios:active{
+    position: relative;
+    top:5px;
+    box-shadow: none;
 }
 #btnCarregaDados{
 background-color: #9999ff;
+font-weight:700;
+border:none;
+box-shadow: 0 5px 0 #6565be;
 }
+#btnCarregaDados:hover{
+    background-color: #6565be;
+    font-weight:700;
+    border:none;
+    box-shadow: 0 5px 0 #4c4c97;
+    }
+    #btnCarregaDados:active{
+        position: relative;
+        top:5px;
+        box-shadow:none;
+        }

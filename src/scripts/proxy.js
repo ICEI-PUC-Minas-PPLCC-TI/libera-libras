@@ -119,3 +119,27 @@ function postCity (body, callback) {
 
     htmlPostRequest(url, JSON.stringify(body), callback);
 }
+
+function getSuggestions (callback) {
+    let url = "suggestions";
+    
+    htmlGetRequest(url, callback);
+}
+
+function postSuggestions(body, callback) {
+    let url = "suggestions";
+
+    htmlPostRequest(url, JSON.stringify(body), callback);
+}
+
+function getComments(screen, callback) {
+    let url = "comments/?screen="+screen;
+    
+    htmlGetRequest(url, callback);
+}
+
+function postComment(body, callback) {
+    let url = "comments";
+    
+    htmlPostRequest(url, JSON.stringify(body), callback);
+}

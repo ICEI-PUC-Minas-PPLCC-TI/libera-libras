@@ -103,10 +103,82 @@ function updatePlaylists(data) {
     });
 }
 
+
+let comments = [];
+
+function fillSugestions(data) {
+    comments = data;
+    let newsFeed = document.getElementById("newsFeed");
+
+    comments.forEach((comment) => {
+        let box = `<div class="card mb-3 col-12">
+            <div class="row no-gutters">
+            <div class="col-12">
+            <div class="card-body">
+            <h5 class="card-title">${comment.name}</h5>
+            <p class="card-text">${comment.desc}
+            </p>
+            </div>
+            </div>
+            </div>
+        </div>`;
+
+        newsFeed.innerHTML += box;
+    });
+}
+
+function completeSugestions(data) {
+    let newsFeed = document.getElementById("newsFeed");
+
+    let comment = data;
+
+    let box = `<div class="card mb-3 col-12">
+            <div class="row no-gutters">
+            <div class="col-12">
+            <div class="card-body">
+            <h5 class="card-title">${comment.name}</h5>
+            <p class="card-text">${comment.desc}
+            </p>
+            </div>
+            </div>
+            </div>
+        </div>`;
+
+    newsFeed.innerHTML += box;
+    titleForm.value = "";
+    descForm.value = "";
+}
+
+function configureSendForm() {
+    register.onsubmit = (e) => {
+        if (titleForm.value.length == 0 || descForm.value.length == 0) {
+            instrucoes.classList.add("erro");
+            instrucoes.innerHTML = "Preencha todos os campos";
+            console.log("erro");
+        } else {
+            let info = {
+                name: titleForm.value,
+                desc: descForm.value,
+                screen: "contents",
+            };
+
+            instrucoes.innerHTML = "";
+            instrucoes.classList.remove("erro");
+
+            postComment(info, completeSugestions);
+
+            newsFeed = document.getElementById("newsFeed");
+        }
+        e.preventDefault();
+    };
+}
+
 function start() {
     getSpotlightVideo("home", updateSpotlightVideo);
     getPlaylistByPage(playlistPage, playlistPageSize, updatePlaylists);
     playlistPage++;
+    getComments("home", fillSugestions)
+    configureSendForm();
 }
 
 function endPage() {
@@ -124,57 +196,3 @@ $(window).scroll(function () {
         endPage();
     }
 });
-
-/*Cometários js*/
-function leDados( ) {
-    let strDados = localStorage.getItem('dc');
-     let objDados = {};
-    if(strDados) {
-       objDados = JSON.parse(strDados);
-    }
-   else {
-       objDados = {Comentário:[
-                         {Nome: "Joana Silva", Comentário:"legal"},
-                         {Nome: "Diana Vilela", Comentário:"gostei"}
-                        ] }
-   }
-    return objDados;
-}
-
-function salvaDados (dados) {
-   localStorage.setItem('dc',JSON.stringify (dados));
-}
-
-function incluirComentarios (){
-   //Ler os dados do localStorage
-   let objDados = leDados();
-
-   //Incluir um novo contato
-   let strNome = document.getElementById('campoNome').value;
-   let strComentario = document.getElementById('cMsg').value;
-   let novoComentario = {
-       Nome: strNome,
-       Comentário: strComentario
-   };
-   objDados.Comentário.push (novoComentario);
-
-   //Salvar os dados no localStorage novamente 
-    salvaDados (objDados);
-
-    //Atualiza os dados  da tela 
-    imprimeDados();
-}
- 
-
-function imprimeDados (dados) {
-    let tela = document.getElementById('tela');
-    let strHtml = '';
-    let objDados = leDados ();
-    for (i=0; i< objDados.Comentário.length; i++) {
-        strHtml += `<p>${objDados.Comentário[i].Nome}: ${objDados.Comentário[i].Comentário}</p>`
-    }
-    tela.innerHTML = strHtml;
-}
-//configura os botões
-document.getElementById('btnCarregaDados').addEventListener('click',imprimeDados);
-document.getElementById('btnIncluirComentarios').addEventListener('click',incluirComentarios);

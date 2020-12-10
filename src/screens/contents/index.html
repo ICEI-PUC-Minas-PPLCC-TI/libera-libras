@@ -11,6 +11,7 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="../../assets/LogoMini.png" />
 
 
     <link rel="stylesheet" href="styles.css">
@@ -239,27 +240,50 @@
 
 
 
-<!--Comentário usando js -->
-<h1>Comentários</h1>
-
-
-<form id="formCometarios">
-   <label for="Nome">Nome:</label>
-       <input type="text" id="campoNome" placeholder="Escreva seu nome"><br>
-  
-   <div class="mb-4">
-   <label for="Nome">Comentário:</label><br>
-   
-   <textarea name="tMsg"id="cMsg" placeholder="Deixe sua mensagem"></textarea>
-  <!--<textarea name="tMsg"id="cMsg" cols="100" rows="7" placeholder="Deixe sua mensagem"></textarea> -->
+<div class="container">
+    <h1>Comentários:</h1>
+    <div class="row">
+        <div class="col">
+            <div class="title1 ml-2">
+                <h3 class="section-title">Envie sugestões:</h3>
+            </div>
+            <div class="sugest">
+                <form id="register" method="post" class="formulario col-12">
+                    <div class="row">
+                        <span id="instrucoes"></span>
+                        <div class="col-12">
+                            <p>
+                                <label for="titleForm">Nome:</label>
+                                <input type="text" id="titleForm" name="titleForm" class="form-control form-field"
+                                    placeholder="Escreva seu nome..." />
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                <label for="descForm">Comentário:</label>
+                                <br>
+                                <textarea id="descForm" name="descForm" class="form-control form-field" rows="4"
+                                    placeholder="Escreva seu comentário..."></textarea>
+                            </p>
+                        </div>
+                    </div>
+                    <p><button type="submit" class="btn btn-primary">Confirmar</button></p>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
-   <button id ="btnIncluirComentarios">Salvar</button>
-</p>
-</form>
-<button id="btnCarregaDados">Últimos Comentários</button> 
-<div id="tela"></div>
-
-       <!--Fim Comentário-->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="title1">
+                <h3 class="section-title ml-2">Últimos Comentários:</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="newsFeed">
+    </div>
+</div>
 
 
 

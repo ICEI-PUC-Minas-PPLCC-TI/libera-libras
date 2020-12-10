@@ -8,8 +8,8 @@ function getSearchParam(field) {
 }
 
 function getArgs () {
-    news = getSearchParam("news");
-    video = getSearchParam("video");
+    let news = getSearchParam("news");
+    let video = getSearchParam("video");
     if (news) {
         getNews(news, fillInfos);
     } else if (video) {

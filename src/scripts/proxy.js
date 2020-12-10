@@ -119,3 +119,9 @@ function postCity (body, callback) {
 
     htmlPostRequest(url, JSON.stringify(body), callback);
 }
+
+function getSuggestions (callback) {
+    let url = "suggestions";
+
+    htmlGetRequest(url, callback);
+}

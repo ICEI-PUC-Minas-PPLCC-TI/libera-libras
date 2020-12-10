@@ -28,7 +28,7 @@ function formatDate(date) {
 function fillInfos(data) {
     let info = data;
 
-    console.log(movie)
+    console.log(info);
 }
 
 $(document).ready(function () {

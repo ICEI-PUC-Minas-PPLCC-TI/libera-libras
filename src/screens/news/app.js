@@ -36,6 +36,7 @@ function updateNews(data) {
             news.date
         );
         thisNewsDiv.getElementsByClassName("title")[0].innerHTML = news.title;
+        thisNewsDiv.getElementsByClassName("internalLink")[0].href = "../info/?news="+news.id;
         thisNewsDiv.getElementsByClassName("content")[0].innerHTML =
             news.content;
         thisNewsDiv.getElementsByClassName("link")[0].href = news.url;

@@ -8,6 +8,8 @@ function getSearchParam(field) {
     return params.get(field);
 }
 
+var comments = [];
+
 function fillSugestions(data) {
     comments = data;
     let newsFeed = document.getElementById("newsFeed");
@@ -105,10 +107,6 @@ function fillInfos(data) {
 
     console.log(info);
 }
-
-let comments = [];
-
-
 
 
 $(document).ready(function () {

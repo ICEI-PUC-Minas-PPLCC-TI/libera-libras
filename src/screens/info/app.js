@@ -105,8 +105,66 @@ function formatDate(date) {
 function fillInfos(data) {
     let info = data;
 
-    console.log(info);
+    //testando
+    let query = document.getElementById('spotlight').value;
+
+    let xhr = new XMLHttpRequest ();
+    xhr.onload = exibeNoticias;
+    xhr.open ('GET',
+   
+
+    query += `<div id="spotlight" class="spotlight-area">
+                    <div class="spotlight-row row">
+                        <div class="video-row col-12">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="560" height="315" src="${video}" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <div class="spotliht-content col-12">
+                            <h3 class="title"></h3>
+                            <p class="content">${news}</p>
+                        </div>  
+                    </div>
+                </div>`
+                )
+
+
+ //fim testando 
+
+   console.log(info);
+
 }
+
+//testando
+function exibeNoticias(){
+    let divspotlight = document.getElementById('spotlight');
+    let texto = '';
+
+    //Montar texto com html
+    let dados = JSON.parse(this.responseText);
+   for ( i=0; i<dados.length;i++){
+         let noticia = dados
+   }
+
+
+
+   //preeencher a DIV com otexto html
+
+
+}//fim exibe noticias
+//fim testando
+
+
+
+
+
+
+
+
 
 
 $(document).ready(function () {

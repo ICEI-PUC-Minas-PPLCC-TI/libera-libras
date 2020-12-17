@@ -143,3 +143,15 @@ function postComment(body, callback) {
     
     htmlPostRequest(url, JSON.stringify(body), callback);
 }
+
+function getNews(id, callback) {
+    let url = "news/"+id;
+
+    htmlGetRequest(url, callback);
+}
+
+function getVideo(id, callback) {
+    let url = "videos/" + id;
+
+    htmlGetRequest(url, callback);
+}

@@ -13,6 +13,11 @@ html {
     border-radius: 12px;
 }
 
+.menu {
+    justify-content: space-around;
+    padding: 0 32px;
+}
+
 .navbar-toggler {
     border-color: #3a3ca3 !important;
     color: #3a3ca3 !important;
@@ -24,6 +29,7 @@ html {
 
 .menuItens > .nav-link {
     color: #3a3ca3;
+    margin: 0 8px;
 }
 
 .menuItens > .nav-link:hover {

@@ -1,3 +1,4 @@
+var infoPage = "./../info/";
 var playlistPageSize = 3;
 var newsPageSize = 3;
 var videoPageSize = 2;
@@ -7,7 +8,9 @@ function updateSpotlightVideo(data) {
     let spotlight = document.getElementById("spotlight");
 
     spotlight.getElementsByTagName("iframe")[0].src = video.url;
-    spotlight.getElementsByClassName("title")[0].innerHTML = video.title;
+    spotlight.getElementsByClassName("title")[0].innerHTML = `<a href=${
+        infoPage + "?video=" + video.id
+    }>${video.title}</a>`;
     spotlight.getElementsByClassName("description")[0].innerHTML =
         video.description;
 }
@@ -41,7 +44,9 @@ function updateSpotlightCarousel(data) {
 
         thisVideoDiv.id = "spotlight-video-" + video.id;
         thisVideoDiv.getElementsByTagName("iframe")[0].src = video.url;
-        thisVideoDiv.getElementsByClassName("title")[0].innerHTML = video.title;
+        thisVideoDiv.getElementsByClassName("title")[0].innerHTML = `<a href=${
+            infoPage + "?video=" + video.id
+        }>${video.title}</a>`;
         thisVideoDiv.getElementsByClassName("description")[0].innerHTML =
             video.description;
     });
@@ -87,8 +92,11 @@ function updatePlaylistVideos(data) {
 
             thisVideoDiv.id = "video-" + video.id;
             thisVideoDiv.getElementsByTagName("iframe")[0].src = video.url;
-            thisVideoDiv.getElementsByClassName("title")[0].innerHTML =
-                video.title;
+            thisVideoDiv.getElementsByClassName(
+                "title"
+            )[0].innerHTML = `<a href=${infoPage + "?video=" + video.id}>${
+                video.title
+            }</a>`;
             thisVideoDiv.getElementsByClassName("description")[0].innerHTML =
                 video.description;
         });
@@ -168,6 +176,7 @@ function updateNews(data) {
         thisNewsDiv.getElementsByClassName("content")[0].innerHTML =
             news.content;
         thisNewsDiv.getElementsByClassName("link")[0].href = news.url;
+        thisNewsDiv.getElementsByClassName("internal-link")[0].href = infoPage+"?news="+news.id;
         thisNewsDiv.getElementsByTagName("img")[0].src = news.imageUrl;
     });
 }

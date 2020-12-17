@@ -1,6 +1,6 @@
 const params = new URL(window.location).searchParams;
 const imageUrl = "https://image.tmdb.org/t/p/w500";
-const movieUrl = "https://www.themoviedb.org/movie/";
+const movieUrl = "db.json";
 var pageName = ""
 var movieCategories = [];
 
@@ -110,27 +110,8 @@ function fillInfos(data) {
 
     let xhr = new XMLHttpRequest ();
     xhr.onload = exibeNoticias;
-    xhr.open ('GET',
-   
+    xhr.open ('GET', `db.json`);
 
-    query += `<div id="spotlight" class="spotlight-area">
-                    <div class="spotlight-row row">
-                        <div class="video-row col-12">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe width="560" height="315" src="${video}" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen>
-                                </iframe>
-                            </div>
-                        </div>
-
-                        <div class="spotliht-content col-12">
-                            <h3 class="title"></h3>
-                            <p class="content">${news}</p>
-                        </div>  
-                    </div>
-                </div>`
-                )
 
 
  //fim testando 
@@ -146,8 +127,28 @@ function exibeNoticias(){
 
     //Montar texto com html
     let dados = JSON.parse(this.responseText);
-   for ( i=0; i<dados.length;i++){
-         let noticia = dados
+   for ( i=0; i<dados.news.length;i++){
+         let noticia = dados.news[i];
+
+    texto = texto + `<div id="spotlight" class="spotlight-area">
+    <div class="spotlight-row row">
+        <div class="video-row col-12">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="${video}" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="spotliht-content col-12">
+            <h3 class="title"></h3>
+            <p class="content">${content}</p>
+        </div>  
+    </div>
+</div>`;
+
+
    }
 
 

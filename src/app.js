@@ -1,3 +1,4 @@
+var infoPage = "./screens/info/"
 var playlistPage = 1;
 var playlistPageSize = 2;
 var videoPageSize = 2;
@@ -7,7 +8,9 @@ function updateSpotlightVideo(data) {
     let spotlight = document.getElementById("spotlight");
 
     spotlight.getElementsByTagName("iframe")[0].src = video.url;
-    spotlight.getElementsByClassName("title")[0].innerHTML = video.title;
+    spotlight.getElementsByClassName("title")[0].innerHTML = `<a href=${
+        infoPage + "?video=" + video.id
+    }>${video.title}</a>`;
     spotlight.getElementsByClassName("description")[0].innerHTML =
         video.description;
 }
@@ -49,8 +52,9 @@ function updatePlaylistVideos(data) {
 
             thisVideoDiv.id = "video-" + video.id;
             thisVideoDiv.getElementsByTagName("iframe")[0].src = video.url;
-            thisVideoDiv.getElementsByClassName("title")[0].innerHTML =
-                video.title;
+            thisVideoDiv.getElementsByClassName(
+                "title"
+            )[0].innerHTML = `<a href=${infoPage+"?video="+video.id}>${video.title}</a>`;
             thisVideoDiv.getElementsByClassName("description")[0].innerHTML =
                 video.description;
         });

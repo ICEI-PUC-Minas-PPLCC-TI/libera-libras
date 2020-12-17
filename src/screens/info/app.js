@@ -1,7 +1,6 @@
 const params = new URL(window.location).searchParams;
 const imageUrl = "https://image.tmdb.org/t/p/w500";
-const movieUrl = "db.json";
-var pageName = ""
+var pageName = "";
 var movieCategories = [];
 
 function getSearchParam(field) {
@@ -77,19 +76,18 @@ function configureSendForm() {
     };
 }
 
-
-function getArgs () {
+function getArgs() {
     let news = getSearchParam("news");
     let video = getSearchParam("video");
     if (news) {
-        getNews(news, fillInfos);
-        pageName = "news-"+news;
-        getComments(pageName, fillSugestions); 
+        getNews(news, fillNews);
+        pageName = "news-" + news;
+        getComments(pageName, fillSugestions);
         configureSendForm();
     } else if (video) {
-        getVideo(video, fillInfos);
-        pageName = "video-"+video;
-        getComments(pageName, fillSugestions); 
+        getVideo(video, fillVideo);
+        pageName = "video-" + video;
+        getComments(pageName, fillSugestions);
         configureSendForm();
     } else {
         //sem parametros
@@ -102,71 +100,35 @@ function formatDate(date) {
     );
 }
 
-function fillInfos(data) {
+function fillVideo(data) {
     let info = data;
 
-    //testando
-    let query = document.getElementById('spotlight').value;
 
-    let xhr = new XMLHttpRequest ();
-    xhr.onload = exibeNoticias;
-    xhr.open ('GET', `db.json`);
+    document.getElementById(
+        "mediaArea"
+    ).innerHTML = `<div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="560" height="315" src=${info.url} frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>`;
 
-
-
- //fim testando 
-
-   console.log(info);
-
+    document.getElementById("title").innerHTML = info.title;
+    document.getElementById("text").innerHTML = info.description;
 }
 
-//testando
-function exibeNoticias(){
-    let divspotlight = document.getElementById('spotlight');
-    let texto = '';
+function fillNews(data) {
+    let info = data;
 
-    //Montar texto com html
-    let dados = JSON.parse(this.responseText);
-   for ( i=0; i<dados.news.length;i++){
-         let noticia = dados.news[i];
+    document.getElementById(
+        "mediaArea"
+    ).innerHTML = `<div class="news-image col-12">
+                        <img class="embed-responsive embed-responsive-16by9" src=${info.imageUrl}>
+                    </div>`;
 
-    texto = texto + `<div id="spotlight" class="spotlight-area">
-    <div class="spotlight-row row">
-        <div class="video-row col-12">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="560" height="315" src="${video}" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-
-        <div class="spotliht-content col-12">
-            <h3 class="title"></h3>
-            <p class="content">${content}</p>
-        </div>  
-    </div>
-</div>`;
-
-
-   }
-
-
-
-   //preeencher a DIV com otexto html
-
-
-}//fim exibe noticias
-//fim testando
-
-
-
-
-
-
-
-
-
+    document.getElementById("title").innerHTML = `<a target="_blank" href=${info.url}>${formatDate(info.date)} - ${info.title}<\a>`;
+    document.getElementById("text").innerHTML = info.content;
+}
 
 $(document).ready(function () {
     getArgs();
